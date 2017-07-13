@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema path="/com/github/davidmhewitt/clipped/settings/" id="com.github.davidmhewitt.clipped.settings">
+    <key type="b" name="first-run">
+      <default>true</default>
+      <summary>Whether this is the first time that Clipped has opened</summary>
+      <description>Used to determine whether or not to perform initial install steps</description>
+    </key>
+  </schema>
+</schemalist>
+

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Clipped
+GenericName=Clipboard Manager
+Comment=Manage and paste clipboard history
+Categories=Office;Utility;TextTools;
+Exec=com.github.davidmhewitt.clipped
+Icon=com.github.davidmhewitt.clipped
+Terminal=false
+Type=Application
+X-GNOME-Gettext-Domain=clipped
+Keywords=Clipboard;Manager;History;Copy;Paste;
