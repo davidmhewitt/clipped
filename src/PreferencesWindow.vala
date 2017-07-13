@@ -59,7 +59,19 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
         general_grid.column_spacing = 12;
         general_grid.row_spacing = 6;
 
-        general_grid.attach (autostart_warning_label, 0, 0, 1, 1);
+        var general_header = create_heading (_("General Settings"));
+
+        var retention_label = create_label (_("Days a clipboard item is kept after it was last used:"));
+        var retention_spinner = create_spinbutton (1, 90, 1);
+
+        if (first_run) {
+            general_grid.attach (autostart_warning_label, 0, 0, 2, 1);
+        }
+
+        general_grid.attach (general_header, 0, 1, 1, 1);
+
+        general_grid.attach (retention_label, 0, 2, 1, 1);
+        general_grid.attach (retention_spinner, 1, 2, 1, 1);
 
         return general_grid;
     }

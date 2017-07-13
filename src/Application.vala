@@ -31,6 +31,7 @@ public class Clipped.Application : Gtk.Application {
     private ClipboardStore clipboard_store;
 
     private bool show_paste = false;
+    private bool show_preferences = false;
     private int? queued_paste = null;
 
     construct {
@@ -67,6 +68,12 @@ public class Clipped.Application : Gtk.Application {
             prefs.show_all ();
             add_window (prefs);
             settings.set_boolean ("first-run", false);
+        }
+
+        if (show_preferences) {
+            var prefs = new PreferencesWindow (first_run);
+            prefs.show_all ();
+            add_window (prefs);
         }
 
         if (show_paste) {
@@ -130,9 +137,10 @@ public class Clipped.Application : Gtk.Application {
 	public override int command_line (ApplicationCommandLine command_line) {
 		bool version = false;
 
-		OptionEntry[] options = new OptionEntry[2];
+		OptionEntry[] options = new OptionEntry[3];
 		options[0] = { "version", 0, 0, OptionArg.NONE, ref version, "Display version number", null };
         options[1] = { "show-paste-window", 0, 0, OptionArg.NONE, ref show_paste, "Display paste history window", null };
+        options[2] = { "preferences", 0, 0, OptionArg.NONE, ref show_preferences, "Display preferences window", null };
 
 		// We have to make an extra copy of the array, since .parse assumes
 		// that it can remove strings from the array without freeing them.
