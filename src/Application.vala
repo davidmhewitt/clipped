@@ -49,8 +49,9 @@ public class Clipped.Application : Gtk.Application {
     public override void activate () {
         var settings = new GLib.Settings (application_id + ".settings");
         var first_run = settings.get_boolean ("first-run");
+        var retention_period = settings.get_uint ("days-to-keep-entries");
 
-        clipboard_store = new ClipboardStore ();
+        clipboard_store = new ClipboardStore (retention_period);
 
         manager = new ClipboardManager ();
         manager.start ();

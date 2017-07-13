@@ -6,6 +6,11 @@
       <summary>Whether this is the first time that Clipped has opened</summary>
       <description>Used to determine whether or not to perform initial install steps</description>
     </key>
+    <key type="u" name="days-to-keep-entries">
+      <default>7</default>
+      <summary>How many days to keep a clipboard entry since it was last pasted</summary>
+      <description>Pasting an item regularly will keep it in the store, lesser used items will be purged</description>
+    </key>
   </schema>
 </schemalist>
 

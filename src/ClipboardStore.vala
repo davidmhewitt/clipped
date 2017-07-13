@@ -20,9 +20,10 @@
 */
 
 public class Clipped.ClipboardStore : Object {
-    private bool database_ready = false;
     private string db_location;
     private Sqlite.Database db;
+
+    private uint retention_period_days = 7;
 
     public enum ClipboardEntryType {
         TEXT
@@ -39,7 +40,9 @@ public class Clipped.ClipboardStore : Object {
         int optional_int;
     }
  
-    public ClipboardStore () {
+    public ClipboardStore (uint retention_period) {
+        retention_period_days = retention_period;
+
         var config_dir_path = Path.build_path (Path.DIR_SEPARATOR_S, Environment.get_user_config_dir(), "clipped");
         var config_dir = File.new_for_path (config_dir_path);
         if (!config_dir.query_exists ()) {
@@ -88,6 +91,8 @@ public class Clipped.ClipboardStore : Object {
     }
 
     public void insert_text_item (string text) {
+        purge_older_entries ();
+
         var checksum = Checksum.compute_for_string (ChecksumType.SHA1, text);
         Sqlite.Statement stmt;
 
@@ -112,7 +117,7 @@ public class Clipped.ClipboardStore : Object {
         }
     }
 
-    public Gee.ArrayList<ClipboardEntry?> get_most_recent_items (int limit = 10) {
+    public Gee.ArrayList<ClipboardEntry?>? get_most_recent_items (int limit = 10) {
         Sqlite.Statement stmt;
         const string prepared_query_str = "SELECT rowid, * FROM entry ORDER BY date_copied DESC LIMIT $LIMIT;";
 	    int ec = db.prepare_v2 (prepared_query_str, prepared_query_str.length, out stmt);
@@ -143,7 +148,7 @@ public class Clipped.ClipboardStore : Object {
         return entries;
     }
 
-    public Gee.ArrayList<ClipboardEntry?> search (string search_term, string? app_search_term = null, int limit = 10) {
+    public Gee.ArrayList<ClipboardEntry?>? search (string search_term, string? app_search_term = null, int limit = 10) {
         Sqlite.Statement stmt;
 
         var wildcard_search_term = "%%%s%%".printf (search_term);
@@ -235,7 +240,7 @@ public class Clipped.ClipboardStore : Object {
                WHERE rowid = $ROWID;""";
 	    int ec = db.prepare_v2 (prepared_query_str, prepared_query_str.length, out stmt);
 	    if (ec != Sqlite.OK) {
-		    warning ("Error getting clipboard entry for pasting: %s\n", db.errmsg ());
+		    warning ("Error updating last_paste date on clipboard entry: %s\n", db.errmsg ());
 	    }
 
         int param_position = stmt.bind_parameter_index ("$ROWID");
@@ -244,5 +249,26 @@ public class Clipped.ClipboardStore : Object {
         stmt.bind_int (param_position, id);
 
         stmt.step ();
+    }
+
+    private void purge_older_entries () {
+        Sqlite.Statement stmt;
+        const string prepared_query_str = "DELETE FROM entry WHERE last_used <= STRFTIME('%Y-%m-%d %H:%M:%f', 'NOW', 'localtime', $DIFFERENCE);";
+
+        int ec = db.prepare_v2 (prepared_query_str, prepared_query_str.length, out stmt);
+        if (ec != Sqlite.OK) {
+            warning ("Error purging older clipboard entries: %s\n", db.errmsg ());
+        }
+
+        int param_position = stmt.bind_parameter_index ("$DIFFERENCE");
+        assert (param_position > 0);
+
+        string difference = "-%u days".printf (retention_period_days);
+
+        stmt.bind_text (param_position, difference);
+
+        if ((ec = stmt.step ()) != Sqlite.DONE) {
+            warning ("Error purging older clipboard entries: %s\n", db.errmsg ());
+        }
     }
 }
