@@ -3,7 +3,7 @@ Search and paste from your clipboard history.
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.davidmhewitt.clipped)
 
-![Clipped Screenshot](https://github.com/davidmhewitt/torrential/raw/master/data/com.github.davidmhewitt.clipped.screenshot.png)
+![Clipped Screenshot](https://github.com/davidmhewitt/clipped/raw/master/data/com.github.davidmhewitt.clipped.screenshot.png)
 
 ## Building, Testing, and Installation
 
