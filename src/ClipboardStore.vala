@@ -114,7 +114,7 @@ public class Clipped.ClipboardStore : Object {
 
     public Gee.ArrayList<ClipboardEntry?> get_most_recent_items (int limit = 10) {
         Sqlite.Statement stmt;
-        const string prepared_query_str = "SELECT rowid, * FROM entry ORDER BY date_copied DESC LIMIT $LIMIT";
+        const string prepared_query_str = "SELECT rowid, * FROM entry ORDER BY date_copied DESC LIMIT $LIMIT;";
 	    int ec = db.prepare_v2 (prepared_query_str, prepared_query_str.length, out stmt);
 	    if (ec != Sqlite.OK) {
 		    warning ("Error fetching clipboard entries: %s\n", db.errmsg ());
@@ -208,7 +208,7 @@ public class Clipped.ClipboardStore : Object {
 
     public void select_item (int id) {
         Sqlite.Statement stmt;
-        const string prepared_query_str = "SELECT rowid, * FROM entry WHERE rowid = $ROWID";
+        const string prepared_query_str = "SELECT rowid, * FROM entry WHERE rowid = $ROWID;";
 	    int ec = db.prepare_v2 (prepared_query_str, prepared_query_str.length, out stmt);
 	    if (ec != Sqlite.OK) {
 		    warning ("Error getting clipboard entry for pasting: %s\n", db.errmsg ());
@@ -220,9 +220,29 @@ public class Clipped.ClipboardStore : Object {
         stmt.bind_int (param_position, id);
 
         if ((ec = stmt.step ()) == Sqlite.ROW) {
+            touch_access_date (id);
             var text = stmt.column_text (4);
             var clipboard = Gtk.Clipboard.get_default (Gdk.Display.get_default ());
             clipboard.set_text (text, -1);
         }
+    }
+
+    private void touch_access_date (int id) {
+        Sqlite.Statement stmt;
+        const string prepared_query_str =
+            """UPDATE entry
+               SET last_used = STRFTIME('%Y-%m-%d %H:%M:%f', 'NOW', 'localtime')
+               WHERE rowid = $ROWID;""";
+	    int ec = db.prepare_v2 (prepared_query_str, prepared_query_str.length, out stmt);
+	    if (ec != Sqlite.OK) {
+		    warning ("Error getting clipboard entry for pasting: %s\n", db.errmsg ());
+	    }
+
+        int param_position = stmt.bind_parameter_index ("$ROWID");
+        assert (param_position > 0);
+
+        stmt.bind_int (param_position, id);
+
+        stmt.step ();
     }
 }
