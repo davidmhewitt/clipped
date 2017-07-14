@@ -135,6 +135,7 @@ public class Clipped.Application : Gtk.Application {
     }
 
 	public override int command_line (ApplicationCommandLine command_line) {
+        show_paste = show_preferences = false;
 		bool version = false;
 
 		OptionEntry[] options = new OptionEntry[3];

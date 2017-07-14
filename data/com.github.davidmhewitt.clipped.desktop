@@ -9,3 +9,8 @@ Terminal=false
 Type=Application
 X-GNOME-Gettext-Domain=clipped
 Keywords=Clipboard;Manager;History;Copy;Paste;
+Actions=Preferences;
+
+[Desktop Action Preferences]
+Name=Clipped Preferences
+Exec=com.github.davidmhewitt.clipped --preferences

@@ -61,7 +61,7 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
 
         var general_header = create_heading (_("General Settings"));
 
-        var retention_label = create_label (_("Days a clipboard item is kept after it was last used:"));
+        var retention_label = create_label (_("Days a clipboard item is kept for after it was last used:"));
         var retention_spinner = create_spinbutton (1, 90, 1);
 
         if (first_run) {
