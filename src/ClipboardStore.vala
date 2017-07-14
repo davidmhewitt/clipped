@@ -57,6 +57,10 @@ public class Clipped.ClipboardStore : Object {
             prepare_database ();
         }
     }
+
+    public void set_retention_days (uint days) {
+        retention_period_days = days;
+    }
     
     private bool open_database () {
         int ec = Sqlite.Database.open(db_location, out db);

@@ -54,6 +54,10 @@ public class Clipped.Application : Gtk.Application {
 
         clipboard_store = new ClipboardStore (retention_period);
 
+        settings.changed["days-to-keep-entries"].connect (() => {
+            clipboard_store.set_retention_days (settings.get_uint ("days-to-keep-entries"));
+        });
+
         manager = new ClipboardManager ();
         manager.start ();
 
