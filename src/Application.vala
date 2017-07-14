@@ -71,6 +71,9 @@ public class Clipped.Application : Gtk.Application {
         }
 
         if (show_preferences) {
+            if (window != null) {
+                window.destroy ();
+            }
             var prefs = new PreferencesWindow (first_run);
             prefs.show_all ();
             add_window (prefs);
