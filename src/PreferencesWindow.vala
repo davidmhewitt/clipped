@@ -18,7 +18,11 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
     private const int MIN_WIDTH = 420;
     private const int MIN_HEIGHT = 300;
 
+    private GLib.Settings settings;
+
     public PreferencesWindow (bool first_run = false) {
+        settings = new GLib.Settings ("com.github.davidmhewitt.clipped.settings");
+
         // Window properties        
         title = _("Preferences");
         set_size_request (MIN_WIDTH, MIN_HEIGHT);
@@ -63,6 +67,7 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
 
         var retention_label = create_label (_("Days a clipboard item is kept for after it was last used:"));
         var retention_spinner = create_spinbutton (1, 90, 1);
+        settings.bind ("days-to-keep-entries", retention_spinner, "value", SettingsBindFlags.DEFAULT);
 
         if (first_run) {
             general_grid.attach (autostart_warning_label, 0, 0, 2, 1);
