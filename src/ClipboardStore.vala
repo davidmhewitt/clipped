@@ -46,7 +46,11 @@ public class Clipped.ClipboardStore : Object {
         var config_dir_path = Path.build_path (Path.DIR_SEPARATOR_S, Environment.get_user_config_dir(), "clipped");
         var config_dir = File.new_for_path (config_dir_path);
         if (!config_dir.query_exists ()) {
-            config_dir.make_directory_with_parents ();
+            try {
+                config_dir.make_directory_with_parents ();
+            } catch (Error e) {
+                warning ("Failed to create directory to store clipboard data: %s", e.message);
+            }
         }
         
         db_location = Path.build_path (Path.DIR_SEPARATOR_S, config_dir_path, "ClipboardStore.sqlite");

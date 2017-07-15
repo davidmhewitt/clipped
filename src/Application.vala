@@ -125,12 +125,20 @@ public class Clipped.Application : Gtk.Application {
                                             "autostart", 
                                             desktop_file_name);
         var dest_file = File.new_for_path (dest_path);
-        desktop_file.copy (dest_file, FileCopyFlags.OVERWRITE);
+        try {
+            desktop_file.copy (dest_file, FileCopyFlags.OVERWRITE);
+        } catch (Error e) {
+            warning ("Error making copy of desktop file for autostart: %s", e.message);
+        }
 
         var keyfile = new KeyFile ();
-        keyfile.load_from_file (dest_path, KeyFileFlags.NONE);
-        keyfile.set_boolean ("Desktop Entry", "X-GNOME-Autostart-enabled", true);
-        keyfile.save_to_file (dest_path);
+        try {
+            keyfile.load_from_file (dest_path, KeyFileFlags.NONE);
+            keyfile.set_boolean ("Desktop Entry", "X-GNOME-Autostart-enabled", true);
+            keyfile.save_to_file (dest_path);
+        } catch (Error e) {
+            warning ("Error enabling autostart: %s", e.message);
+        }
     }
 
     private void load_entries (Gee.ArrayList<ClipboardStore.ClipboardEntry?> entries) {
@@ -152,7 +160,7 @@ public class Clipped.Application : Gtk.Application {
 		// We have to make an extra copy of the array, since .parse assumes
 		// that it can remove strings from the array without freeing them.
 		string[] args = command_line.get_arguments ();
-		string*[] _args = new string[args.length];
+		string[] _args = new string[args.length];
 		for (int i = 0; i < args.length; i++) {
 			_args[i] = args[i];
 		}

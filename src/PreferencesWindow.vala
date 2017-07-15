@@ -35,7 +35,7 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
         });
 
         var button_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
-        button_box.margin_right = 10;
+        button_box.margin_end = 10;
         button_box.set_layout (Gtk.ButtonBoxStyle.END);
         button_box.pack_end (close_button);
 

@@ -43,7 +43,11 @@ public class Clipped.Widgets.ClipboardListRow : Gtk.ListBoxRow {
         id = entry.id;
 
         var provider = new Gtk.CssProvider ();
-        provider.load_from_data (KEYCAP_CSS);
+        try {
+            provider.load_from_data (KEYCAP_CSS);
+        } catch (Error e) {
+            warning ("Failed to load custom CSS for keycap labels: %s", e.message);
+        }
 
         var grid = new Gtk.Grid ();
         grid.column_spacing = 12;

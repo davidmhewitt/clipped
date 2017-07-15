@@ -82,20 +82,6 @@ class CustomShortcutSettings : Object {
         apply_settings (relocatable_settings);
     }
 
-    public static void remove_shortcut (string relocatable_schema)
-        requires (available) {
-
-        string []relocatable_schemas = {};
-
-        foreach (var schema in get_relocatable_schemas ())
-            if (schema != relocatable_schema)
-                relocatable_schemas += schema;
-
-        reset_relocatable_schema (relocatable_schema);
-        settings.set_strv (KEY + "s", relocatable_schemas);
-        apply_settings (settings);
-    }
-
     public static bool edit_shortcut (string relocatable_schema, string shortcut)
         requires (available) {
 

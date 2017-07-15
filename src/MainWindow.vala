@@ -67,11 +67,19 @@ public class Clipped.MainWindow : Gtk.Dialog {
         });
 
         var font_size_provider = new Gtk.CssProvider ();
-        font_size_provider.load_from_data (SEARCH_CSS);
+        try {
+            font_size_provider.load_from_data (SEARCH_CSS);
+        } catch (Error e) {
+            warning ("Failed to load CSS style for search box: %s", e.message);
+        }
         search_headerbar.get_style_context ().add_provider (font_size_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
 
         var background_provider = new Gtk.CssProvider ();
-        background_provider.load_from_data (BACKGROUND_CSS);
+        try {
+            background_provider.load_from_data (BACKGROUND_CSS);
+        } catch (Error e) {
+            warning ("Failed to load CSS style for search window background");
+        }
         get_style_context ().add_provider (background_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
 
         var list_box_scroll = new Gtk.ScrolledWindow (null, null);

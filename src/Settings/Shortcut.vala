@@ -68,14 +68,6 @@ class Shortcut : GLib.Object
 		return tmp;
     }
 	
-	public bool is_equal (Shortcut shortcut)
-	{
-		if (shortcut.modifiers == modifiers)
-			if (shortcut.accel_key == accel_key)
-				return true;
-		return false;
-	}
-	
 	// validator
 	public bool valid()
 	{
