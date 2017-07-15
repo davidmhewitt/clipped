@@ -44,7 +44,7 @@ public class Clipped.Widgets.ClipboardListRow : Gtk.ListBoxRow {
 
         var provider = new Gtk.CssProvider ();
         try {
-            provider.load_from_data (KEYCAP_CSS);
+            provider.load_from_data (KEYCAP_CSS, -1);
         } catch (Error e) {
             warning ("Failed to load custom CSS for keycap labels: %s", e.message);
         }

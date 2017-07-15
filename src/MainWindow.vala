@@ -68,7 +68,7 @@ public class Clipped.MainWindow : Gtk.Dialog {
 
         var font_size_provider = new Gtk.CssProvider ();
         try {
-            font_size_provider.load_from_data (SEARCH_CSS);
+            font_size_provider.load_from_data (SEARCH_CSS, -1);
         } catch (Error e) {
             warning ("Failed to load CSS style for search box: %s", e.message);
         }
@@ -76,7 +76,7 @@ public class Clipped.MainWindow : Gtk.Dialog {
 
         var background_provider = new Gtk.CssProvider ();
         try {
-            background_provider.load_from_data (BACKGROUND_CSS);
+            background_provider.load_from_data (BACKGROUND_CSS, -1);
         } catch (Error e) {
             warning ("Failed to load CSS style for search window background");
         }
