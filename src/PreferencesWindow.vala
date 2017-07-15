@@ -66,16 +66,23 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
         var general_header = create_heading (_("General Settings"));
 
         var accel = "";
+        string? accel_path = null;
 
         CustomShortcutSettings.init ();
         foreach (var shortcut in CustomShortcutSettings.list_custom_shortcuts ()) {
             if (shortcut.command == Application.SHOW_PASTE_CMD) {
                 accel = shortcut.shortcut;
+                accel_path = shortcut.relocatable_schema;
             }
         }
 
         var paste_shortcut_label = create_label (_("Paste Shortcut:"));
         var paste_shortcut_entry = new Widgets.ShortcutEntry (accel);
+        paste_shortcut_entry.shortcut_changed.connect ((new_shortcut) => {
+            if (accel_path != null) {
+                CustomShortcutSettings.edit_shortcut (accel_path, new_shortcut);
+            }
+        });
 
         var retention_label = create_label (_("Days to keep infrequently used items:"));
         var retention_spinner = create_spinbutton (1, 90, 1);

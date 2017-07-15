@@ -16,6 +16,8 @@
 
 public class Clipped.Widgets.ShortcutEntry : Gtk.TreeView {
 
+    public signal void shortcut_changed (string new_shortcut);
+
     public ShortcutEntry (string accel) {
         var shortcut = new Shortcut.parse (accel);
 
@@ -26,7 +28,9 @@ public class Clipped.Widgets.ShortcutEntry : Gtk.TreeView {
         this.get_column (0).expand = true;
 
         cell_edit.accel_edited.connect ((path, key, mods) =>  {
-            change_shortcut (path, new Shortcut (key, mods));
+            var new_shortcut = new Shortcut (key, mods);
+            change_shortcut (path, new_shortcut);
+            shortcut_changed (new_shortcut.to_gsettings ());
         });
 
         Gtk.TreeIter iter;
@@ -39,7 +43,6 @@ public class Clipped.Widgets.ShortcutEntry : Gtk.TreeView {
 
     private void change_shortcut (string path, Shortcut? shortcut) {
         Gtk.TreeIter  iter;
-        GLib.Value    key, schema, name;
 
         model.get_iter (out iter, new Gtk.TreePath.from_string (path));
 
