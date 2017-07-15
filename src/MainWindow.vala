@@ -115,8 +115,17 @@ public class Clipped.MainWindow : Gtk.Dialog {
                     return true;
                 case Gdk.Key.Down:
                 case Gdk.Key.Up:
-                    list_box.grab_focus ();
-                    list_box.key_press_event (event);
+                    bool has_selection = list_box.get_selected_rows ().length () > 0;
+                    if (!has_selection) {
+                        list_box.select_row (list_box.get_row_at_index (0));
+                    }
+                    var rows = list_box.get_selected_rows ();
+                    if (rows.length () > 0) {
+                        rows.nth_data (0).grab_focus ();
+                    }
+                    if (has_selection) {
+                        list_box.key_press_event (event);
+                    }
                     return true;
                 case Gdk.Key.Return:
                     return false;
