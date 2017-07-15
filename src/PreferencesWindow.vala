@@ -50,7 +50,6 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
         string autostart_warning = 
             _("<b>Note:</b> From now on, Clipped will automatically start in the background when you log in.") + " " +
             _("If you wish to change this behaviour, visit <a href=\"settings://applications/startup\">Application Settings\u2026</a>");
-              
 
         var autostart_warning_label = new Gtk.Label (autostart_warning);
         autostart_warning_label.halign = Gtk.Align.START;
@@ -122,4 +121,3 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
         return button;
     }
 }
-

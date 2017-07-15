@@ -25,11 +25,24 @@ public class Clipped.Widgets.ShortcutEntry : Gtk.TreeView {
         this.headers_visible = false;
         this.get_column (0).expand = true;
 
+        cell_edit.accel_edited.connect ((path, key, mods) =>  {
+            change_shortcut (path, new Shortcut (key, mods));
+        });
+
         Gtk.TreeIter iter;
         var store = new Gtk.ListStore (1, typeof (string));
         store.append (out iter);
         store.set (iter, 0, shortcut.to_readable ());
 
         model = store;
-    }        
+    }
+
+    private void change_shortcut (string path, Shortcut? shortcut) {
+        Gtk.TreeIter  iter;
+        GLib.Value    key, schema, name;
+
+        model.get_iter (out iter, new Gtk.TreePath.from_string (path));
+
+        (model as Gtk.ListStore).set (iter, 0, shortcut.to_readable ());
+    }
 }
