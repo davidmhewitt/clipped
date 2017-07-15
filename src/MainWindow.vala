@@ -112,6 +112,16 @@ public class Clipped.MainWindow : Gtk.Dialog {
                 case Gdk.Key.@7:
                 case Gdk.Key.@8:
                 case Gdk.Key.@9:
+                    uint val = event.keyval - Gdk.Key.@0;
+                    if (val == 0) {
+                        val = 10;
+                    }
+                    list_box.select_row (list_box.get_row_at_index ((int)val - 1));
+                    var rows = list_box.get_selected_rows ();
+                    if (rows.length () > 0) {
+                        rows.nth_data (0).grab_focus ();
+                    }
+                    list_box.activate_cursor_row ();
                     return true;
                 case Gdk.Key.Down:
                 case Gdk.Key.Up:
