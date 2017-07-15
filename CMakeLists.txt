@@ -47,9 +47,11 @@ vala_precompile(VALA_C ${EXEC_NAME}
     src/ClipboardStore.vala
     src/PreferencesWindow.vala
     src/Settings/CustomShortcutSettings.vala
+    src/Settings/Shortcut.vala
     src/Widgets/ClipboardListBox.vala
     src/Widgets/ClipboardListRow.vala
     src/Widgets/AlertView.vala
+    src/Widgets/ShortcutEntry.vala
 
 # tell what libraries to use when compiling
 PACKAGES

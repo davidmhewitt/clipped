@@ -52,9 +52,10 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
             _("If you wish to change this behaviour, visit <a href=\"settings://applications/startup\">Application Settings\u2026</a>");
               
 
-        var autostart_warning_label = create_label (autostart_warning);
+        var autostart_warning_label = new Gtk.Label (autostart_warning);
+        autostart_warning_label.halign = Gtk.Align.START;
         autostart_warning_label.use_markup = true;
-        autostart_warning_label.max_width_chars = 60;
+        autostart_warning_label.max_width_chars = 50;
         autostart_warning_label.wrap = true;
 
         Gtk.Grid general_grid = new Gtk.Grid ();
@@ -65,7 +66,19 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
 
         var general_header = create_heading (_("General Settings"));
 
-        var retention_label = create_label (_("Days a clipboard item is kept for after it was last used:"));
+        var accel = "";
+
+        CustomShortcutSettings.init ();
+        foreach (var shortcut in CustomShortcutSettings.list_custom_shortcuts ()) {
+            if (shortcut.command == Application.SHOW_PASTE_CMD) {
+                accel = shortcut.shortcut;
+            }
+        }
+
+        var paste_shortcut_label = create_label (_("Paste Shortcut:"));
+        var paste_shortcut_entry = new Widgets.ShortcutEntry (accel);
+
+        var retention_label = create_label (_("Days to keep infrequently used items:"));
         var retention_spinner = create_spinbutton (1, 90, 1);
         settings.bind ("days-to-keep-entries", retention_spinner, "value", SettingsBindFlags.DEFAULT);
 
@@ -75,8 +88,11 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
 
         general_grid.attach (general_header, 0, 1, 1, 1);
 
-        general_grid.attach (retention_label, 0, 2, 1, 1);
-        general_grid.attach (retention_spinner, 1, 2, 1, 1);
+        general_grid.attach (paste_shortcut_label, 0, 2, 1, 1);
+        general_grid.attach (paste_shortcut_entry, 1, 2, 1, 1);
+
+        general_grid.attach (retention_label, 0, 3, 1, 1);
+        general_grid.attach (retention_spinner, 1, 3, 1, 1);
 
         return general_grid;
     }
@@ -87,14 +103,6 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
         label.halign = Gtk.Align.START;
 
         return label;
-    }
-
-    private Gtk.Switch create_switch () {
-        var toggle = new Gtk.Switch ();
-        toggle.halign = Gtk.Align.START;
-        toggle.hexpand = true;
-
-        return toggle;
     }
 
     private Gtk.Label create_label (string text) {
@@ -108,22 +116,6 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
 
     private Gtk.SpinButton create_spinbutton (double min, double max, double step) {
         var button = new Gtk.SpinButton.with_range (min, max, step);
-        button.halign = Gtk.Align.START;
-        button.hexpand = true;
-
-        return button;
-    }
-
-    private Gtk.Entry create_entry () {
-        var entry = new Gtk.Entry ();
-        entry.halign = Gtk.Align.START;
-        entry.hexpand = true;
-
-        return entry;
-    }
-
-    private Gtk.Button create_button (string label) {
-        var button = new Gtk.Button.with_label (label);
         button.halign = Gtk.Align.START;
         button.hexpand = true;
 

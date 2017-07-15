@@ -24,7 +24,7 @@ public class Clipped.Application : Gtk.Application {
     private ClipboardManager manager;
     private MainWindow window;
 
-    private const string SHOW_PASTE_CMD = "com.github.davidmhewitt.clipped --show-paste-window";
+    public const string SHOW_PASTE_CMD = "com.github.davidmhewitt.clipped --show-paste-window";
     private const string SHOW_PASTE_SHORTCUT = "<Control><Alt>v";
     private string version_string;
 
@@ -32,6 +32,7 @@ public class Clipped.Application : Gtk.Application {
 
     private bool show_paste = false;
     private bool show_preferences = false;
+    private bool already_running = false;
     private int? queued_paste = null;
 
     construct {
@@ -68,9 +69,7 @@ public class Clipped.Application : Gtk.Application {
         if (first_run) {
             install_autostart ();
             set_default_shortcut ();
-            var prefs = new PreferencesWindow (first_run);
-            prefs.show_all ();
-            add_window (prefs);
+            show_preferences = true;
             settings.set_boolean ("first-run", false);
         }
 
@@ -83,7 +82,7 @@ public class Clipped.Application : Gtk.Application {
             add_window (prefs);
         }
 
-        if (show_paste) {
+        if (show_paste || (already_running && !show_preferences)) {
             queued_paste = null;
             window = new MainWindow (clipboard_store.get_most_recent_items ());
             add_window (window);
@@ -159,7 +158,7 @@ public class Clipped.Application : Gtk.Application {
 		}
 
 		try {
-			var opt_context = new OptionContext ("- OptionContext example");
+			var opt_context = new OptionContext ();
 			opt_context.set_help_enabled (true);
 			opt_context.add_main_entries (options, null);
 			unowned string[] tmp = _args;
@@ -177,6 +176,7 @@ public class Clipped.Application : Gtk.Application {
         
         hold ();
         activate ();
+        already_running = true;
 		return 0;
 	}
 
