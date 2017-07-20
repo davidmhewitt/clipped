@@ -16,7 +16,7 @@ msgstr "Ctrl"
 
 #: ../src/MainWindow.vala:54
 msgid "Search Clipboard History…"
-msgstr "Buscar historial del portapapeles"
+msgstr "Buscar en el historial de Clipped"
 
 #: ../src/MainWindow.vala:88
 msgid "No Clipboard Items Found"
@@ -28,7 +28,7 @@ msgstr "Intenta cambiando los términos de búsquedad"
 
 #: ../src/MainWindow.vala:180
 msgid "Items must be copied before they appear in Clipped"
-msgstr "Los elementos deben ser copiados antes de que aparezcan en el portapapel"
+msgstr "Los elementos deben ser copiados antes de que aparezcan en Clipped"
 
 #: ../src/PreferencesWindow.vala:27
 msgid "Preferences"
@@ -43,12 +43,16 @@ msgid ""
 "<b>Note:</b> From now on, Clipped will automatically start in the background "
 "when you log in."
 msgstr ""
+"<b>Nota:</b> Desde ahora, Clipped va a iniciarse automaticamente en segundo plano "
+"cuando inicies sesión."
 
 #: ../src/PreferencesWindow.vala:52
 msgid ""
 "If you wish to change this behaviour, visit <a href=\"settings://"
 "applications/startup\">Application Settings…</a>"
 msgstr ""
+"Si quieres cambiar este comportamiento, visit <a href=\"settings://"
+"applications/startup\">Configuracion de Aplicación</a>"
 
 #: ../src/PreferencesWindow.vala:66
 msgid "General Settings"
