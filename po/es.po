@@ -8,35 +8,35 @@ msgstr ""
 
 #: ../src/Settings/Shortcut.vala:37
 msgid "Disabled"
-msgstr ""
+msgstr "Deshabilitado"
 
 #: ../src/Settings/Shortcut.vala:46
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ../src/MainWindow.vala:54
 msgid "Search Clipboard History…"
-msgstr ""
+msgstr "Buscar historial del portapapeles"
 
 #: ../src/MainWindow.vala:88
 msgid "No Clipboard Items Found"
-msgstr ""
+msgstr "Ningún portapapel encontrado"
 
 #: ../src/MainWindow.vala:178
 msgid "Try changing search terms."
-msgstr ""
+msgstr "Intenta cambiando los términos de búsquedad"
 
 #: ../src/MainWindow.vala:180
 msgid "Items must be copied before they appear in Clipped"
-msgstr ""
+msgstr "Los elementos deben ser copiados antes de que aparezcan en el portapapel"
 
 #: ../src/PreferencesWindow.vala:27
 msgid "Preferences"
-msgstr ""
+msgstr "Preferencias"
 
 #: ../src/PreferencesWindow.vala:32
 msgid "Close"
-msgstr ""
+msgstr "Cerrar"
 
 #: ../src/PreferencesWindow.vala:51
 msgid ""
@@ -52,12 +52,12 @@ msgstr ""
 
 #: ../src/PreferencesWindow.vala:66
 msgid "General Settings"
-msgstr ""
+msgstr "Configuración General"
 
 #: ../src/PreferencesWindow.vala:79
 msgid "Paste Shortcut:"
-msgstr ""
+msgstr "Pegar acceso directo"
 
 #: ../src/PreferencesWindow.vala:87
 msgid "Days to keep infrequently used items:"
-msgstr ""
+msgstr "Dias para mantener elementos usados con poca frecuencia"
