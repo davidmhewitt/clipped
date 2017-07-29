@@ -83,6 +83,11 @@ public class Clipped.Application : Gtk.Application {
         }
 
         if (show_paste || (already_running && !show_preferences)) {
+            if (window != null) {
+                window.close ();
+                window = null;
+                return;
+            }
             queued_paste = null;
             window = new MainWindow (clipboard_store.get_most_recent_items ());
             add_window (window);
