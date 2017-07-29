@@ -101,6 +101,13 @@ public class Clipped.Application : Gtk.Application {
                 }
             });
 
+            window.focus_out_event.connect (() => {
+                window.close ();
+                remove_window (window);
+                window = null;
+                return false;
+            });
+
             window.paste_item.connect ((id) => {
                 queued_paste = id;
             });
