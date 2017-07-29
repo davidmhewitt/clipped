@@ -85,6 +85,7 @@ public class Clipped.Application : Gtk.Application {
         if (show_paste || (already_running && !show_preferences)) {
             if (window != null) {
                 window.close ();
+                remove_window (window);
                 window = null;
                 return;
             }
