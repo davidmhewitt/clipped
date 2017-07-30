@@ -8,56 +8,60 @@ msgstr ""
 
 #: ../src/Settings/Shortcut.vala:37
 msgid "Disabled"
-msgstr ""
+msgstr "Desativado"
 
 #: ../src/Settings/Shortcut.vala:46
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ../src/MainWindow.vala:54
 msgid "Search Clipboard History…"
-msgstr ""
+msgstr "Pesquisar Histórico da Área de Transferência ..."
 
 #: ../src/MainWindow.vala:88
 msgid "No Clipboard Items Found"
-msgstr ""
+msgstr "Não Foram Encontrados Itens da Área de Transferência"
 
 #: ../src/MainWindow.vala:178
 msgid "Try changing search terms."
-msgstr ""
+msgstr "Tente alterar os termos de pesquisa."
 
 #: ../src/MainWindow.vala:180
 msgid "Items must be copied before they appear in Clipped"
-msgstr ""
+msgstr "Os itens devem ser copiados antes de aparecerem no Clipped"
 
 #: ../src/PreferencesWindow.vala:27
 msgid "Preferences"
-msgstr ""
+msgstr "Preferências"
 
 #: ../src/PreferencesWindow.vala:32
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 #: ../src/PreferencesWindow.vala:51
 msgid ""
 "<b>Note:</b> From now on, Clipped will automatically start in the background "
 "when you log in."
 msgstr ""
+"<b>Nota:</b> De agora em diante, o Clipped irá começar automaticamente em segundo plano "
+"quando iniciar sessão."
 
 #: ../src/PreferencesWindow.vala:52
 msgid ""
 "If you wish to change this behaviour, visit <a href=\"settings://"
 "applications/startup\">Application Settings…</a>"
 msgstr ""
+"Se deseja alterar esse comportamento, visite <a href=\"settings://"
+"applications/startup\">Configurações da aplicação...</a>"
 
 #: ../src/PreferencesWindow.vala:66
 msgid "General Settings"
-msgstr ""
+msgstr "Configurações Gerais"
 
 #: ../src/PreferencesWindow.vala:79
 msgid "Paste Shortcut:"
-msgstr ""
+msgstr "Atalho de Colar:"
 
 #: ../src/PreferencesWindow.vala:87
 msgid "Days to keep infrequently used items:"
-msgstr ""
+msgstr "Dias para manter itens raramente utilizados:"
