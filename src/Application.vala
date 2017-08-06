@@ -22,13 +22,14 @@
 public class Clipped.Application : Gtk.Application {
     private static Clipped.Application? _instance = null;
     private ClipboardManager manager;
-    private MainWindow window;
+    private MainWindow? window = null;
 
     public const string SHOW_PASTE_CMD = "com.github.davidmhewitt.clipped --show-paste-window";
     private const string SHOW_PASTE_SHORTCUT = "<Control><Alt>v";
     private string version_string;
 
     private ClipboardStore clipboard_store;
+    private KeybindingManager keybinds;
 
     private bool show_paste = false;
     private bool show_preferences = false;
@@ -39,11 +40,16 @@ public class Clipped.Application : Gtk.Application {
         application_id = "com.github.davidmhewitt.clipped";
         flags = ApplicationFlags.HANDLES_COMMAND_LINE;
         version_string = "1.0.0";
+
+        CustomShortcutSettings.init ();
         
-        window_removed.connect (() => {
+        window_removed.connect ((closed_window) => {
             if (queued_paste != null) {
                 clipboard_store.select_item (queued_paste);
                 manager.paste ();
+            }
+            if (closed_window == window) {
+                close_window ();
             }
         });
     }
@@ -75,7 +81,7 @@ public class Clipped.Application : Gtk.Application {
 
         if (show_preferences) {
             if (window != null) {
-                window.destroy ();
+                close_window ();
             }
             var prefs = new PreferencesWindow (first_run);
             prefs.show_all ();
@@ -83,12 +89,6 @@ public class Clipped.Application : Gtk.Application {
         }
 
         if (show_paste || (already_running && !show_preferences)) {
-            if (window != null) {
-                window.close ();
-                remove_window (window);
-                window = null;
-                return;
-            }
             queued_paste = null;
             window = new MainWindow (clipboard_store.get_most_recent_items ());
             add_window (window);
@@ -102,16 +102,37 @@ public class Clipped.Application : Gtk.Application {
             });
 
             window.focus_out_event.connect (() => {
-                window.close ();
-                remove_window (window);
-                window = null;
+                close_window ();
                 return false;
             });
 
             window.paste_item.connect ((id) => {
                 queued_paste = id;
             });
+
+            keybinds = new KeybindingManager();
+            keybinds.bind (get_paste_shortcut (), () => {
+                close_window ();
+            });
         }
+    }
+
+    private void close_window () {
+        if (window != null) {
+            window.destroy ();
+            window = null;
+        }
+        queued_paste = null;
+        keybinds.unbind (get_paste_shortcut ());
+    }
+
+    private string? get_paste_shortcut () {
+        foreach (var shortcut in CustomShortcutSettings.list_custom_shortcuts ()) {
+            if (shortcut.command == SHOW_PASTE_CMD) {
+                return shortcut.shortcut;
+            }
+        }
+        return null;
     }
     
     private void set_default_shortcut () {

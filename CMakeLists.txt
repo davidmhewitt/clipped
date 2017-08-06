@@ -45,6 +45,7 @@ vala_precompile(VALA_C ${EXEC_NAME}
     src/MainWindow.vala
     src/ClipboardManager.vala
     src/ClipboardStore.vala
+    src/KeybindingManager.vala
     src/PreferencesWindow.vala
     src/Settings/CustomShortcutSettings.vala
     src/Settings/Shortcut.vala
