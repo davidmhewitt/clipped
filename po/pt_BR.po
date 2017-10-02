@@ -5,59 +5,70 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
+"Project-Id-Version: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Paulo Galardi <lainsce@airmail.cc>\n"
+"Language-Team: \n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../src/Settings/Shortcut.vala:37
 msgid "Disabled"
-msgstr ""
+msgstr "Desabilitado"
 
 #: ../src/Settings/Shortcut.vala:46
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ../src/MainWindow.vala:54
 msgid "Search Clipboard History…"
-msgstr ""
+msgstr "Procurar a História da Prancheta Virtual…"
 
 #: ../src/MainWindow.vala:88
 msgid "No Clipboard Items Found"
-msgstr ""
+msgstr "Sem Items Encontrados"
 
 #: ../src/MainWindow.vala:178
 msgid "Try changing search terms."
-msgstr ""
+msgstr "Tente mudar os termos da pesquisa"
 
 #: ../src/MainWindow.vala:180
 msgid "Items must be copied before they appear in Clipped"
-msgstr ""
+msgstr "Items devem ser copiados antes de estarem no Clipped"
 
 #: ../src/PreferencesWindow.vala:27
 msgid "Preferences"
-msgstr ""
+msgstr "Preferências"
 
 #: ../src/PreferencesWindow.vala:32
 msgid "Close"
-msgstr ""
+msgstr "Copiar"
 
 #: ../src/PreferencesWindow.vala:51
 msgid ""
 "<b>Note:</b> From now on, Clipped will automatically start in the background "
 "when you log in."
 msgstr ""
+"<b>Nota:</b> De agora em diante, Clipped ai automaticamente começar no "
+"planeo de fundo quando você entrar na sua sessão."
 
 #: ../src/PreferencesWindow.vala:52
 msgid ""
 "If you wish to change this behaviour, visit <a href=\"settings://"
 "applications/startup\">Application Settings…</a>"
 msgstr ""
+"Se quiser mudar este comportamento, visite as <a href=\"settings://"
+"applications/startup\">Preferências do Aplicativo…</a>"
 
 #: ../src/PreferencesWindow.vala:66
 msgid "General Settings"
-msgstr ""
+msgstr "Preferências Gerais"
 
 #: ../src/PreferencesWindow.vala:79
 msgid "Paste Shortcut:"
-msgstr ""
+msgstr "Atalho de Cola:"
 
 #: ../src/PreferencesWindow.vala:87
 msgid "Days to keep infrequently used items:"
-msgstr ""
+msgstr "Dias para manter items não-frequentemente usados:"
