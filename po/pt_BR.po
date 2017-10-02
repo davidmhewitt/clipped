@@ -50,8 +50,8 @@ msgid ""
 "<b>Note:</b> From now on, Clipped will automatically start in the background "
 "when you log in."
 msgstr ""
-"<b>Nota:</b> De agora em diante, Clipped ai automaticamente começar no "
-"planeo de fundo quando você entrar na sua sessão."
+"<b>Nota:</b> De agora em diante, Clipped vai automaticamente começar no "
+"plano de fundo quando você entrar na sua sessão."
 
 #: ../src/PreferencesWindow.vala:52
 msgid ""
