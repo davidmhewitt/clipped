@@ -1,7 +1,9 @@
 [Desktop Entry]
 Name=Clipped
 GenericName=Clipboard Manager
+GenericName[lt]=Iškarpinės tvarkytuvė
 Comment=Manage and paste clipboard history
+Comment[lt]=Tvarkyti ir įdėti iškarpinės istoriją
 Categories=Office;Utility;TextTools;
 Exec=com.github.davidmhewitt.clipped
 Icon=com.github.davidmhewitt.clipped
@@ -9,8 +11,10 @@ Terminal=false
 Type=Application
 X-GNOME-Gettext-Domain=clipped
 Keywords=Clipboard;Manager;History;Copy;Paste;
+Keywords[lt]=Iškarpinė;Tvarkytuvė;Istorija;Kopijuoti;Įdėti;
 Actions=Preferences;
 
 [Desktop Action Preferences]
 Name=Clipped Preferences
+Name[lt]=Clipped nuostatos
 Exec=com.github.davidmhewitt.clipped --preferences
