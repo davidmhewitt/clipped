@@ -12,6 +12,7 @@ You'll need the following dependencies to build:
 * libgtk-3-dev
 * valac
 * libsqlite3-dev
+* libgee-0.8-dev
 
 
 ## How To Build
