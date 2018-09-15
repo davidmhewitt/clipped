@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2017 David Hewitt <davidmhewitt@gmail.com> -->
 <component type="desktop">
-  <id>com.github.davidmhewitt.clipped.desktop</id>
+  <id>com.github.davidmhewitt.clipped</id>
   <metadata_license>CC0</metadata_license>
+  <project_license>GPL-2.0</project_license>
   <name>Clipped</name>
   <summary>Manage your clipboard with ease</summary>
   <description>

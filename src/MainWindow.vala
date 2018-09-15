@@ -26,7 +26,7 @@ public class Clipped.MainWindow : Gtk.Dialog {
 
     private const string SEARCH_CSS =
     """
-        .entry {
+        .large-search-entry {
             font-size: 175%;
         }
     """;
@@ -72,7 +72,9 @@ public class Clipped.MainWindow : Gtk.Dialog {
         } catch (Error e) {
             warning ("Failed to load CSS style for search box: %s", e.message);
         }
-        search_headerbar.get_style_context ().add_provider (font_size_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
+        var style_context = search_headerbar.get_style_context ();
+        style_context.add_provider (font_size_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        style_context.add_class ("large-search-entry");
 
         var background_provider = new Gtk.CssProvider ();
         try {
@@ -80,7 +82,7 @@ public class Clipped.MainWindow : Gtk.Dialog {
         } catch (Error e) {
             warning ("Failed to load CSS style for search window background");
         }
-        get_style_context ().add_provider (background_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
+        get_style_context ().add_provider (background_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         var list_box_scroll = new Gtk.ScrolledWindow (null, null);
         list_box_scroll.vexpand = true;
