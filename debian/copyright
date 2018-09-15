@@ -1,7 +1,0 @@
-Format: http://dep.debian.net/deps/dep5
-Upstream-Name: com.github.davidmhewitt.torrential
-Source: https://github.com/davidmhewitt/torrential
-
-Files: *
-Copyright: 2017 David Hewitt
-License: GPL-2
