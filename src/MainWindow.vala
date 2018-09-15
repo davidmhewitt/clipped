@@ -82,7 +82,7 @@ public class Clipped.MainWindow : Gtk.Dialog {
         } catch (Error e) {
             warning ("Failed to load CSS style for search window background");
         }
-        get_style_context ().add_provider (background_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
+        get_style_context ().add_provider (background_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         var list_box_scroll = new Gtk.ScrolledWindow (null, null);
         list_box_scroll.vexpand = true;
