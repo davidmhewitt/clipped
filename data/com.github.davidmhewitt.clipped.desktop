@@ -1,7 +1,9 @@
 [Desktop Entry]
 Name=Clipped
 GenericName=Clipboard Manager
+GenericName[pt_BR]=Gerente da Prancheta Virtual
 Comment=Manage and paste clipboard history
+Comment[pt_BR]=Gerencie e cole a história da sua prancheta virtual
 Categories=Office;Utility;TextTools;
 Exec=com.github.davidmhewitt.clipped
 Icon=com.github.davidmhewitt.clipped
@@ -13,4 +15,5 @@ Actions=Preferences;
 
 [Desktop Action Preferences]
 Name=Clipped Preferences
+Name[pt_BR]=Preferências do Clipped
 Exec=com.github.davidmhewitt.clipped --preferences
