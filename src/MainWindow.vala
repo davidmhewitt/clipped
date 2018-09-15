@@ -26,7 +26,7 @@ public class Clipped.MainWindow : Gtk.Dialog {
 
     private const string SEARCH_CSS =
     """
-        .entry {
+        .large-search-entry {
             font-size: 175%;
         }
     """;
@@ -72,7 +72,9 @@ public class Clipped.MainWindow : Gtk.Dialog {
         } catch (Error e) {
             warning ("Failed to load CSS style for search box: %s", e.message);
         }
-        search_headerbar.get_style_context ().add_provider (font_size_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
+        var style_context = search_headerbar.get_style_context ();
+        style_context.add_provider (font_size_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        style_context.add_class ("large-search-entry");
 
         var background_provider = new Gtk.CssProvider ();
         try {
