@@ -7,23 +7,23 @@ msgstr ""
 
 #: ../src/Settings/Shortcut.vala:37
 msgid "Disabled"
-msgstr ""
+msgstr "Dövrə Xaricində"
 
 #: ../src/Settings/Shortcut.vala:46
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ../src/MainWindow.vala:54
 msgid "Search Clipboard History…"
-msgstr ""
+msgstr "Pano Tarixini Axtar…"
 
 #: ../src/MainWindow.vala:88
 msgid "No Clipboard Items Found"
-msgstr ""
+msgstr "Pano elementləri tapılmadı"
 
 #: ../src/MainWindow.vala:178
 msgid "Try changing search terms."
-msgstr ""
+msgstr "Axtarış sözünü dəyişməyə cəhd edin."
 
 #: ../src/MainWindow.vala:180
 msgid "Items must be copied before they appear in Clipped"
@@ -31,32 +31,36 @@ msgstr ""
 
 #: ../src/PreferencesWindow.vala:27
 msgid "Preferences"
-msgstr ""
+msgstr "Rejimlər"
 
 #: ../src/PreferencesWindow.vala:32
 msgid "Close"
-msgstr ""
+msgstr "Bağla"
 
 #: ../src/PreferencesWindow.vala:51
 msgid ""
 "<b>Note:</b> From now on, Clipped will automatically start in the background "
 "when you log in."
 msgstr ""
+"<b> Qeyd: </ b> İndi, Clipped avtomatik olaraq arxa fonda başlayacaq"
+"daxil olduğunuzda."
 
 #: ../src/PreferencesWindow.vala:52
 msgid ""
 "If you wish to change this behaviour, visit <a href=\"settings://"
 "applications/startup\">Application Settings…</a>"
 msgstr ""
+"Bu davranışı dəyişdirmək istəyirsinizsə, <a href=\"settings://"
+"applications/startup\">Application Settings…</a> ziyarət edin"
 
 #: ../src/PreferencesWindow.vala:66
 msgid "General Settings"
-msgstr ""
+msgstr "Ümumi Parametrlər"
 
 #: ../src/PreferencesWindow.vala:79
 msgid "Paste Shortcut:"
-msgstr ""
+msgstr "Kısayolları yerləşdirin"
 
 #: ../src/PreferencesWindow.vala:87
 msgid "Days to keep infrequently used items:"
-msgstr ""
+msgstr "Nadir istifadə olunan maddələr saxlamaq üçün günlər:"
