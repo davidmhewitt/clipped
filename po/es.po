@@ -1,14 +1,21 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-15 18:27+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
+"Language-Team: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #: ../src/Settings/Shortcut.vala:37
 msgid "Disabled"
-msgstr "Deshabilitado"
+msgstr "Desactivado"
 
 #: ../src/Settings/Shortcut.vala:46
 msgid "Ctrl"
@@ -16,19 +23,19 @@ msgstr "Ctrl"
 
 #: ../src/MainWindow.vala:54
 msgid "Search Clipboard History…"
-msgstr "Buscar en el historial de Clipped"
+msgstr "Buscar en el historial del portapapeles…"
 
 #: ../src/MainWindow.vala:88
 msgid "No Clipboard Items Found"
-msgstr "Ningún portapapel encontrado"
+msgstr "No se encontró ningún elemento en el portapapeles"
 
 #: ../src/MainWindow.vala:178
 msgid "Try changing search terms."
-msgstr "Intenta cambiando los términos de búsquedad"
+msgstr "Pruebe a cambiar los términos de búsqueda."
 
 #: ../src/MainWindow.vala:180
 msgid "Items must be copied before they appear in Clipped"
-msgstr "Los elementos deben ser copiados antes de que aparezcan en Clipped"
+msgstr "Los elementos deben copiarse antes de que aparezcan en Clipped"
 
 #: ../src/PreferencesWindow.vala:27
 msgid "Preferences"
@@ -43,25 +50,25 @@ msgid ""
 "<b>Note:</b> From now on, Clipped will automatically start in the background "
 "when you log in."
 msgstr ""
-"<b>Nota:</b> Desde ahora, Clipped va a iniciarse automaticamente en segundo plano "
-"cuando inicies sesión."
+"<b>Nota:</b> a partir de ahora, Clipped se iniciará automáticamente en "
+"segundo plano al acceder a la cuenta."
 
 #: ../src/PreferencesWindow.vala:52
 msgid ""
 "If you wish to change this behaviour, visit <a href=\"settings://"
 "applications/startup\">Application Settings…</a>"
 msgstr ""
-"Si quieres cambiar este comportamiento, visit <a href=\"settings://"
-"applications/startup\">Configuracion de Aplicación</a>"
+"Si quiere cambiar este comportamiento, visite la <a href=\"settings://"
+"applications/startup\">configuración de la aplicación</a>."
 
 #: ../src/PreferencesWindow.vala:66
 msgid "General Settings"
-msgstr "Configuración General"
+msgstr "Configuración general"
 
 #: ../src/PreferencesWindow.vala:79
 msgid "Paste Shortcut:"
-msgstr "Pegar acceso directo"
+msgstr "Atajo de pegado:"
 
 #: ../src/PreferencesWindow.vala:87
 msgid "Days to keep infrequently used items:"
-msgstr "Dias para mantener elementos usados con poca frecuencia"
+msgstr "Días que conservar elementos poco utilizados:"
