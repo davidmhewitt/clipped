@@ -1,0 +1,56 @@
+# Arabic translations for extra package.
+# Copyright (C) 2019 THE extra'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-02 15:36+0200\n"
+"PO-Revision-Date: 2019-04-02 15:36+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.davidmhewitt.clipped.desktop.in:3
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:7
+msgid "Clipped"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.desktop.in:4
+msgid "Clipboard Manager"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.desktop.in:7
+msgid "Manage and paste clipboard history"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.desktop.in:12
+msgid "com.github.davidmhewitt.clipped"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.desktop.in:16
+msgid "Clipboard;Manager;History;Copy;Paste;"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.desktop.in:21
+msgid "Clipped Preferences"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:8
+msgid "Manage your clipboard with ease"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:10
+msgid ""
+"Keep and search your clipboard history and paste old items quickly and "
+"easily."
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:21
+msgid "David Hewitt"
+msgstr ""

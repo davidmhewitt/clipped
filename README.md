@@ -8,18 +8,23 @@ Search and paste from your clipboard history.
 ## Building, Testing, and Installation
 
 You'll need the following dependencies to build:
-* cmake
+* meson
 * libgtk-3-dev
 * valac
 * libsqlite3-dev
 * libgee-0.8-dev
 
-
 ## How To Build
 
-    git clone https://github.com/davidmhewitt/clipped
-    cd clipped
-    mkdir build && cd build 
-    cmake -DCMAKE_INSTALL_PREFIX=/usr ..
-    make
-    sudo make install
+```bash
+git clone https://github.com/davidmhewitt/clipped
+cd clipped
+meson build --prefix=/usr && cd build 
+ninja install
+```
+
+## Run
+
+```bash
+com.github.davidmhewitt.clipped
+```
