@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-02 15:57+0200\n"
+"POT-Creation-Date: 2019-04-02 16:01+0200\n"
 "PO-Revision-Date: 2019-04-02 15:36+0200\n"
 "Last-Translator: NathanBnm\n"
 "Language-Team: Français\n"
@@ -26,19 +26,19 @@ msgstr "Clipped"
 msgid "Clipboard Manager"
 msgstr "Gestionnaire de presse-papiers"
 
-#: data/com.github.davidmhewitt.clipped.desktop.in:7
+#: data/com.github.davidmhewitt.clipped.desktop.in:5
 msgid "Manage and paste clipboard history"
 msgstr "Gérez l'historique de votre presse-papiers"
 
-#: data/com.github.davidmhewitt.clipped.desktop.in:12
+#: data/com.github.davidmhewitt.clipped.desktop.in:8
 msgid "com.github.davidmhewitt.clipped"
 msgstr "com.github.davidmhewitt.clipped"
 
-#: data/com.github.davidmhewitt.clipped.desktop.in:16
+#: data/com.github.davidmhewitt.clipped.desktop.in:12
 msgid "Clipboard;Manager;History;Copy;Paste;"
 msgstr "Presse-papiers;Gestionnaire;Historique;Copier;Coller;"
 
-#: data/com.github.davidmhewitt.clipped.desktop.in:21
+#: data/com.github.davidmhewitt.clipped.desktop.in:16
 msgid "Clipped Preferences"
 msgstr "Préférences de Clipped"
 

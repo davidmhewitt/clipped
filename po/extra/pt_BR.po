@@ -1,15 +1,15 @@
 # Portuguese translations for extra package.
 # Copyright (C) 2019 THE extra'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# Automatically generated, 2019.
+# Paulo Galardi, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-02 15:57+0200\n"
+"POT-Creation-Date: 2019-04-02 16:01+0200\n"
 "PO-Revision-Date: 2019-04-02 15:36+0200\n"
-"Last-Translator: Automatically generated\n"
+"Last-Translator: Paulo Galardi <lainsce@airmail.cc>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -20,27 +20,27 @@ msgstr ""
 #: data/com.github.davidmhewitt.clipped.desktop.in:3
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:7
 msgid "Clipped"
-msgstr ""
+msgstr "Clipped"
 
 #: data/com.github.davidmhewitt.clipped.desktop.in:4
 msgid "Clipboard Manager"
-msgstr ""
+msgstr "Gerente da Prancheta Virtual"
 
-#: data/com.github.davidmhewitt.clipped.desktop.in:7
+#: data/com.github.davidmhewitt.clipped.desktop.in:5
 msgid "Manage and paste clipboard history"
-msgstr ""
+msgstr "Gerencie e cole a história da sua prancheta virtual"
+
+#: data/com.github.davidmhewitt.clipped.desktop.in:8
+msgid "com.github.davidmhewitt.clipped"
+msgstr "com.github.davidmhewitt.clipped"
 
 #: data/com.github.davidmhewitt.clipped.desktop.in:12
-msgid "com.github.davidmhewitt.clipped"
-msgstr ""
-
-#: data/com.github.davidmhewitt.clipped.desktop.in:16
 msgid "Clipboard;Manager;History;Copy;Paste;"
 msgstr ""
 
-#: data/com.github.davidmhewitt.clipped.desktop.in:21
+#: data/com.github.davidmhewitt.clipped.desktop.in:16
 msgid "Clipped Preferences"
-msgstr ""
+msgstr "Preferências do Clipped"
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:8
 msgid "Manage your clipboard with ease"
@@ -54,4 +54,4 @@ msgstr ""
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:21
 msgid "David Hewitt"
-msgstr ""
+msgstr "David Hewitt"
