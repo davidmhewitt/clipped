@@ -1,15 +1,15 @@
 # Portuguese translations for com.github.davidmhewitt.clipped package.
 # Copyright (C) 2019 THE com.github.davidmhewitt.clipped'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.davidmhewitt.clipped package.
-# Automatically generated, 2019.
+# Paulo Galardi, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.davidmhewitt.clipped\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-02 15:36+0200\n"
+"POT-Creation-Date: 2019-04-02 15:52+0200\n"
 "PO-Revision-Date: 2019-04-02 15:36+0200\n"
-"Last-Translator: Automatically generated\n"
+"Last-Translator: Paulo Galardi <lainsce@airmail.cc>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -19,56 +19,60 @@ msgstr ""
 
 #: src/Settings/Shortcut.vala:37
 msgid "Disabled"
-msgstr ""
+msgstr "Desabilitado"
 
 #: src/Settings/Shortcut.vala:46
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: src/MainWindow.vala:54
 msgid "Search Clipboard History…"
-msgstr ""
+msgstr "Procurar a História da Prancheta Virtual…"
 
 #: src/MainWindow.vala:98
 msgid "No Clipboard Items Found"
-msgstr ""
+msgstr "Sem Items Encontrados"
 
 #: src/MainWindow.vala:188
 msgid "Try changing search terms."
-msgstr ""
+msgstr "Tente mudar os termos da pesquisa"
 
 #: src/MainWindow.vala:190
 msgid "Items must be copied before they appear in Clipped"
-msgstr ""
+msgstr "Items devem ser copiados antes de estarem no Clipped"
 
 #: src/PreferencesWindow.vala:27
 msgid "Preferences"
-msgstr ""
+msgstr "Preferências"
 
 #: src/PreferencesWindow.vala:32
 msgid "Close"
-msgstr ""
+msgstr "Copiar"
 
 #: src/PreferencesWindow.vala:51
 msgid ""
 "<b>Note:</b> From now on, Clipped will automatically start in the background "
 "when you log in."
 msgstr ""
+"<b>Nota:</b> De agora em diante, Clipped vai automaticamente começar no "
+"plano de fundo quando você entrar na sua sessão."
 
 #: src/PreferencesWindow.vala:52
 msgid ""
 "If you wish to change this behaviour, visit <a href=\"settings://"
 "applications/startup\">Application Settings…</a>"
 msgstr ""
+"Se quiser mudar este comportamento, visite as <a href=\"settings://"
+"applications/startup\">Preferências do Aplicativo…</a>"
 
 #: src/PreferencesWindow.vala:66
 msgid "General Settings"
-msgstr ""
+msgstr "Preferências Gerais"
 
 #: src/PreferencesWindow.vala:79
 msgid "Paste Shortcut:"
-msgstr ""
+msgstr "Atalho de Cola:"
 
 #: src/PreferencesWindow.vala:87
 msgid "Days to keep infrequently used items:"
-msgstr ""
+msgstr "Dias para manter items não-frequentemente usados:"

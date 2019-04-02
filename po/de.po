@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.davidmhewitt.clipped\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-02 15:36+0200\n"
+"POT-Creation-Date: 2019-04-02 15:52+0200\n"
 "PO-Revision-Date: 2019-04-02 15:36+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,56 +19,60 @@ msgstr ""
 
 #: src/Settings/Shortcut.vala:37
 msgid "Disabled"
-msgstr ""
+msgstr "Deaktiviert"
 
 #: src/Settings/Shortcut.vala:46
 msgid "Ctrl"
-msgstr ""
+msgstr "Strg"
 
 #: src/MainWindow.vala:54
 msgid "Search Clipboard History…"
-msgstr ""
+msgstr "Durchsuche Verlauf der Zwischenablage…"
 
 #: src/MainWindow.vala:98
 msgid "No Clipboard Items Found"
-msgstr ""
+msgstr "Keine Ergebnisse in der Zwischenablage gefunden"
 
 #: src/MainWindow.vala:188
 msgid "Try changing search terms."
-msgstr ""
+msgstr "Versuchen Sie es mit einem anderen Suchbegriff."
 
 #: src/MainWindow.vala:190
 msgid "Items must be copied before they appear in Clipped"
-msgstr ""
+msgstr "Es müssen erst Texte kopiert werden, bevor diese in Clipped erscheinen"
 
 #: src/PreferencesWindow.vala:27
 msgid "Preferences"
-msgstr ""
+msgstr "Einstellungen"
 
 #: src/PreferencesWindow.vala:32
 msgid "Close"
-msgstr ""
+msgstr "Schließen"
 
 #: src/PreferencesWindow.vala:51
 msgid ""
 "<b>Note:</b> From now on, Clipped will automatically start in the background "
 "when you log in."
 msgstr ""
+"<b>Hinweis:</b> Clipped startet ab sofort automatisch im Hintergrund, wenn "
+"Sie sich anmelden."
 
 #: src/PreferencesWindow.vala:52
 msgid ""
 "If you wish to change this behaviour, visit <a href=\"settings://"
 "applications/startup\">Application Settings…</a>"
 msgstr ""
+"Sie können diese Eigenschaft in den <a href=\"settings://applications/startup"
+"\">Anwendungseinstellungen</a> ändern"
 
 #: src/PreferencesWindow.vala:66
 msgid "General Settings"
-msgstr ""
+msgstr "Allgemeine Einstellungen"
 
 #: src/PreferencesWindow.vala:79
 msgid "Paste Shortcut:"
-msgstr ""
+msgstr "Tastenkombination einfügen:"
 
 #: src/PreferencesWindow.vala:87
 msgid "Days to keep infrequently used items:"
-msgstr ""
+msgstr "Anzahl der Tage zur Speicherung von selten genutzten Einträgen:"

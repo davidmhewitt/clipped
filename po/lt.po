@@ -1,15 +1,15 @@
 # Lithuanian translations for com.github.davidmhewitt.clipped package.
 # Copyright (C) 2019 THE com.github.davidmhewitt.clipped'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.davidmhewitt.clipped package.
-# Automatically generated, 2019.
+# Moo, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.davidmhewitt.clipped\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-02 15:36+0200\n"
+"POT-Creation-Date: 2019-04-02 15:52+0200\n"
 "PO-Revision-Date: 2019-04-02 15:36+0200\n"
-"Last-Translator: Automatically generated\n"
+"Last-Translator: Moo\n"
 "Language-Team: none\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -20,56 +20,62 @@ msgstr ""
 
 #: src/Settings/Shortcut.vala:37
 msgid "Disabled"
-msgstr ""
+msgstr "Išjungta"
 
 #: src/Settings/Shortcut.vala:46
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl(Vald)"
 
 #: src/MainWindow.vala:54
 msgid "Search Clipboard History…"
-msgstr ""
+msgstr "Ieškoti iškarpinės istorijoje…"
 
 #: src/MainWindow.vala:98
 msgid "No Clipboard Items Found"
-msgstr ""
+msgstr "Nerasta jokių iškarpinės elementų"
 
 #: src/MainWindow.vala:188
 msgid "Try changing search terms."
-msgstr ""
+msgstr "Pabandykite pakeisti paieškos žodžius."
 
 #: src/MainWindow.vala:190
 msgid "Items must be copied before they appear in Clipped"
 msgstr ""
+"Prieš elementams atsirandant Clipped programoje, jie, iš pradžių, privalo "
+"būti nukopijuoti"
 
 #: src/PreferencesWindow.vala:27
 msgid "Preferences"
-msgstr ""
+msgstr "Nuostatos"
 
 #: src/PreferencesWindow.vala:32
 msgid "Close"
-msgstr ""
+msgstr "Užverti"
 
 #: src/PreferencesWindow.vala:51
 msgid ""
 "<b>Note:</b> From now on, Clipped will automatically start in the background "
 "when you log in."
 msgstr ""
+"<b>Pastaba:</b> Nuo šiol, jums prisijungus, Clipped automatiškai pasileis "
+"fone."
 
 #: src/PreferencesWindow.vala:52
 msgid ""
 "If you wish to change this behaviour, visit <a href=\"settings://"
 "applications/startup\">Application Settings…</a>"
 msgstr ""
+"Norėdami pakeisti šią elgseną, pereikite į <a href=\"settings://applications/"
+"startup\">Programų nustatymus…</a>"
 
 #: src/PreferencesWindow.vala:66
 msgid "General Settings"
-msgstr ""
+msgstr "Bendri nustatymai"
 
 #: src/PreferencesWindow.vala:79
 msgid "Paste Shortcut:"
-msgstr ""
+msgstr "Įdėjimo trumpinys:"
 
 #: src/PreferencesWindow.vala:87
 msgid "Days to keep infrequently used items:"
-msgstr ""
+msgstr "Kiek dienų laikyti retai naudojamus elementus:"

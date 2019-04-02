@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.davidmhewitt.clipped\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-02 15:36+0200\n"
+"POT-Creation-Date: 2019-04-02 15:52+0200\n"
 "PO-Revision-Date: 2019-04-02 15:36+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,56 +19,60 @@ msgstr ""
 
 #: src/Settings/Shortcut.vala:37
 msgid "Disabled"
-msgstr ""
+msgstr "Deshabilitado"
 
 #: src/Settings/Shortcut.vala:46
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: src/MainWindow.vala:54
 msgid "Search Clipboard History…"
-msgstr ""
+msgstr "Buscar en el historial de Clipped"
 
 #: src/MainWindow.vala:98
 msgid "No Clipboard Items Found"
-msgstr ""
+msgstr "Ningún portapapel encontrado"
 
 #: src/MainWindow.vala:188
 msgid "Try changing search terms."
-msgstr ""
+msgstr "Intenta cambiando los términos de búsquedad"
 
 #: src/MainWindow.vala:190
 msgid "Items must be copied before they appear in Clipped"
-msgstr ""
+msgstr "Los elementos deben ser copiados antes de que aparezcan en Clipped"
 
 #: src/PreferencesWindow.vala:27
 msgid "Preferences"
-msgstr ""
+msgstr "Preferencias"
 
 #: src/PreferencesWindow.vala:32
 msgid "Close"
-msgstr ""
+msgstr "Cerrar"
 
 #: src/PreferencesWindow.vala:51
 msgid ""
 "<b>Note:</b> From now on, Clipped will automatically start in the background "
 "when you log in."
 msgstr ""
+"<b>Nota:</b> Desde ahora, Clipped va a iniciarse automaticamente en segundo "
+"plano cuando inicies sesión."
 
 #: src/PreferencesWindow.vala:52
 msgid ""
 "If you wish to change this behaviour, visit <a href=\"settings://"
 "applications/startup\">Application Settings…</a>"
 msgstr ""
+"Si quieres cambiar este comportamiento, visit <a href=\"settings://"
+"applications/startup\">Configuracion de Aplicación</a>"
 
 #: src/PreferencesWindow.vala:66
 msgid "General Settings"
-msgstr ""
+msgstr "Configuración General"
 
 #: src/PreferencesWindow.vala:79
 msgid "Paste Shortcut:"
-msgstr ""
+msgstr "Pegar acceso directo"
 
 #: src/PreferencesWindow.vala:87
 msgid "Days to keep infrequently used items:"
-msgstr ""
+msgstr "Dias para mantener elementos usados con poca frecuencia"
