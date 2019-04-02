@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-02 16:01+0200\n"
+"POT-Creation-Date: 2019-04-02 16:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,6 +52,22 @@ msgid ""
 "easily."
 msgstr ""
 
-#: data/com.github.davidmhewitt.clipped.appdata.xml.in:21
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:23
+msgid "Release: major update"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:25
+msgid "Switch from cmake to meson build"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:26
+msgid "Update French translations by @NathanBnm"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:27
+msgid "Fixes and improvements"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:61
 msgid "David Hewitt"
 msgstr ""
