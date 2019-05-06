@@ -1,9 +1,13 @@
 [Desktop Entry]
 Name=Clipped
 GenericName=Clipboard Manager
+GenericName[ca]=Gestor del porta-retalls
+GenericName[es]=Gestor del portapapeles
 GenericName[lt]=Iškarpinės tvarkytuvė
 GenericName[pt_BR]=Gerente da Prancheta Virtual
 Comment=Manage and paste clipboard history
+Comment[ca]=Gestioneu i enganxeu l’historial del porta-retalls
+Comment[es]=Gestione y pegue el historial del portapapeles
 Comment[lt]=Tvarkyti ir įdėti iškarpinės istoriją
 Comment[pt_BR]=Gerencie e cole a história da sua prancheta virtual
 Categories=Office;Utility;TextTools;
@@ -13,11 +17,15 @@ Terminal=false
 Type=Application
 X-GNOME-Gettext-Domain=clipped
 Keywords=Clipboard;Manager;History;Copy;Paste;
+Keywords[ca]=Porta-retalls;Gestor;Historial;Copiar;Enganxar;
+Keywords[es]=Portapapeles;Gestor;Historial;Copiar;Pegar;
 Keywords[lt]=Iškarpinė;Tvarkytuvė;Istorija;Kopijuoti;Įdėti;
 Actions=Preferences;
 
 [Desktop Action Preferences]
 Name=Clipped Preferences
+Name[ca]=Preferències del Clipped
+Name[es]=Preferencias de Clipped
 Name[lt]=Clipped nuostatos
 Name[pt_BR]=Preferências do Clipped
 Exec=com.github.davidmhewitt.clipped --preferences
