@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-15 18:27+0100\n"
+"POT-Creation-Date: 2019-05-06 14:08+0100\n"
 "PO-Revision-Date: 2018-10-21 07:04-0500\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: \n"
@@ -18,39 +18,39 @@ msgstr ""
 "X-Generator: Poedit 2.1.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/Settings/Shortcut.vala:37
+#: src/Settings/Shortcut.vala:37
 msgid "Disabled"
 msgstr "Inhabilitat"
 
-#: ../src/Settings/Shortcut.vala:46
+#: src/Settings/Shortcut.vala:46
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: ../src/MainWindow.vala:54
+#: src/MainWindow.vala:54
 msgid "Search Clipboard History…"
 msgstr "Cerca a l’historial del porta-retalls…"
 
-#: ../src/MainWindow.vala:88
+#: src/MainWindow.vala:98
 msgid "No Clipboard Items Found"
 msgstr "No s’ha trobat cap element al porta-retalls"
 
-#: ../src/MainWindow.vala:178
+#: src/MainWindow.vala:188
 msgid "Try changing search terms."
 msgstr "Proveu de canviar els termes de cerca."
 
-#: ../src/MainWindow.vala:180
+#: src/MainWindow.vala:190
 msgid "Items must be copied before they appear in Clipped"
 msgstr "Els elements s’han de copiar abans que apareguin al Clipped"
 
-#: ../src/PreferencesWindow.vala:27
+#: src/PreferencesWindow.vala:27
 msgid "Preferences"
 msgstr "Preferències"
 
-#: ../src/PreferencesWindow.vala:32
+#: src/PreferencesWindow.vala:32
 msgid "Close"
 msgstr "Tanca"
 
-#: ../src/PreferencesWindow.vala:51
+#: src/PreferencesWindow.vala:51
 msgid ""
 "<b>Note:</b> From now on, Clipped will automatically start in the background "
 "when you log in."
@@ -58,7 +58,7 @@ msgstr ""
 "<b>Nota:</b> a partir d’ara, el Clipped s’iniciarà automàticament en segon "
 "pla quan inicieu la sessió."
 
-#: ../src/PreferencesWindow.vala:52
+#: src/PreferencesWindow.vala:52
 msgid ""
 "If you wish to change this behaviour, visit <a href=\"settings://"
 "applications/startup\">Application Settings…</a>"
@@ -66,14 +66,14 @@ msgstr ""
 "Si voleu canviar aquest comportament, visiteu els <a href=\"settings://"
 "applications/startup\">paràmetres de l’aplicació</a>."
 
-#: ../src/PreferencesWindow.vala:66
+#: src/PreferencesWindow.vala:66
 msgid "General Settings"
 msgstr "Paràmetres generals"
 
-#: ../src/PreferencesWindow.vala:79
+#: src/PreferencesWindow.vala:79
 msgid "Paste Shortcut:"
 msgstr "Drecera d’enganxament:"
 
-#: ../src/PreferencesWindow.vala:87
+#: src/PreferencesWindow.vala:87
 msgid "Days to keep infrequently used items:"
 msgstr "Dies a mantenir els elements utilitzats infreqüentment:"
