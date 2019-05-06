@@ -1,51 +1,51 @@
 msgid ""
 msgstr ""
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-15 18:27+0100\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-06 14:08+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: ../src/Settings/Shortcut.vala:37
+#: src/Settings/Shortcut.vala:37
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 
-#: ../src/Settings/Shortcut.vala:46
+#: src/Settings/Shortcut.vala:46
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: ../src/MainWindow.vala:54
+#: src/MainWindow.vala:54
 msgid "Search Clipboard History…"
 msgstr "Zoeken door klembordgeschiedenis…"
 
-#: ../src/MainWindow.vala:88
+#: src/MainWindow.vala:98
 msgid "No Clipboard Items Found"
 msgstr "Geen klemborditems gevonden"
 
-#: ../src/MainWindow.vala:178
+#: src/MainWindow.vala:188
 msgid "Try changing search terms."
 msgstr "Probeer andere zoektermen te gebruiken."
 
-#: ../src/MainWindow.vala:180
+#: src/MainWindow.vala:190
 msgid "Items must be copied before they appear in Clipped"
 msgstr "Items moeten worden gekopieerd voordat ze verschijnen in Clipped"
 
-#: ../src/PreferencesWindow.vala:27
+#: src/PreferencesWindow.vala:27
 msgid "Preferences"
 msgstr "Voorkeuren"
 
-#: ../src/PreferencesWindow.vala:32
+#: src/PreferencesWindow.vala:32
 msgid "Close"
 msgstr "Sluiten"
 
-#: ../src/PreferencesWindow.vala:51
+#: src/PreferencesWindow.vala:51
 msgid ""
 "<b>Note:</b> From now on, Clipped will automatically start in the background "
 "when you log in."
@@ -53,7 +53,7 @@ msgstr ""
 "<b>Opmerking:</b> Clipped wordt voortaan automatisch gestart op de "
 "achtergrond als u inlogt."
 
-#: ../src/PreferencesWindow.vala:52
+#: src/PreferencesWindow.vala:52
 msgid ""
 "If you wish to change this behaviour, visit <a href=\"settings://"
 "applications/startup\">Application Settings…</a>"
@@ -61,14 +61,14 @@ msgstr ""
 "Als u dit wilt wijzigen, ga dan naar de <a href=\"settings://applications/"
 "startup\">Applicatie-instellingen…</a>"
 
-#: ../src/PreferencesWindow.vala:66
+#: src/PreferencesWindow.vala:66
 msgid "General Settings"
 msgstr "Algemene instellingen"
 
-#: ../src/PreferencesWindow.vala:79
+#: src/PreferencesWindow.vala:79
 msgid "Paste Shortcut:"
 msgstr "Sneltoets voor plakken:"
 
-#: ../src/PreferencesWindow.vala:87
+#: src/PreferencesWindow.vala:87
 msgid "Days to keep infrequently used items:"
 msgstr "Aantal dagen dat niet-frequent gebruikte items worden bewaard:"
