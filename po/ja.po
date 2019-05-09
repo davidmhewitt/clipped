@@ -1,7 +1,7 @@
 # Japanese translations for com.github.davidmhewitt.clipped package.
 # Copyright (C) 2019 THE com.github.davidmhewitt.clipped'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.davidmhewitt.clipped package.
-# Automatically generated, 2019.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2019.
 #
 msgid ""
 msgstr ""

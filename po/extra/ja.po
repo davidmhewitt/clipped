@@ -1,7 +1,7 @@
 # Japanese translations for extra package.
 # Copyright (C) 2019 THE extra'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# Automatically generated, 2019.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2019.
 #
 msgid ""
 msgstr ""
