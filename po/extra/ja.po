@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-09 17:01+0900\n"
-"PO-Revision-Date: 2019-05-09 17:05+0900\n"
+"PO-Revision-Date: 2019-05-11 17:23+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -43,7 +43,7 @@ msgstr ""
 
 #: data/com.github.davidmhewitt.clipped.desktop.in:16
 msgid "Clipped Preferences"
-msgstr "Clipped 設定"
+msgstr "Clipped の設定"
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:8
 msgid "Manage your clipboard with ease"
