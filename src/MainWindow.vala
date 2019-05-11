@@ -45,6 +45,9 @@ public class Clipped.MainWindow : Gtk.Dialog {
     public MainWindow (Gee.ArrayList<ClipboardStore.ClipboardEntry?> entries) {
         icon_name = "com.github.davidmhewitt.clipped";
 
+        var settings = Gtk.Settings.get_default ();
+        settings.gtk_theme_name = "elementary";
+
         set_keep_above (true);
         window_position = Gtk.WindowPosition.CENTER;
 
@@ -122,6 +125,7 @@ public class Clipped.MainWindow : Gtk.Dialog {
                 case Gdk.Key.@7:
                 case Gdk.Key.@8:
                 case Gdk.Key.@9:
+
                     uint val = event.keyval - Gdk.Key.@0;
                     if (val == 0) {
                         val = 10;
