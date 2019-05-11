@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 18:02+0100\n"
+"POT-Creation-Date: 2019-05-11 12:46+0100\n"
 "PO-Revision-Date: 2019-05-06 14:02+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -53,13 +53,25 @@ msgid ""
 msgstr ""
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:25
-msgid "Switch from cmake to meson build"
+msgid "You can now delete clipboard entries with the delete key"
 msgstr ""
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:26
+msgid "Typing numbers is now possible while the search bar is focused"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:27
+msgid "Updated Spanish and Catalan translations by @fitojb"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:28
 msgid "Update French translations by @NathanBnm"
 msgstr ""
 
-#: data/com.github.davidmhewitt.clipped.appdata.xml.in:60
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:29
+msgid "Add Japanese translations by @ryonakano"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:63
 msgid "David Hewitt"
 msgstr ""
