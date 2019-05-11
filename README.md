@@ -8,7 +8,7 @@ Search and paste from your clipboard history.
 ## Building, Testing, and Installation
 
 You'll need the following dependencies to build:
-* cmake
+* meson
 * libgtk-3-dev
 * valac
 * libsqlite3-dev
