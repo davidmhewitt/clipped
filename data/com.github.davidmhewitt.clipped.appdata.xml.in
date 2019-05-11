@@ -19,11 +19,14 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="1.1.0" date="2019-05-06">
+    <release version="1.1.0" date="2019-05-11">
       <description>
         <ul>
-          <li>Switch from cmake to meson build</li>
+          <li>You can now delete clipboard entries with the delete key</li>
+          <li>Typing numbers is now possible while the search bar is focused</li>
+          <li>Updated Spanish and Catalan translations by @fitojb</li>
           <li>Update French translations by @NathanBnm</li>
+          <li>Add Japanese translations by @ryonakano</li>
         </ul>
       </description>
     </release>
