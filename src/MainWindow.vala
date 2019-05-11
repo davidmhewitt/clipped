@@ -23,6 +23,8 @@ public class Clipped.MainWindow : Gtk.Dialog {
 
     public signal void search_changed (string search_term);
     public signal void paste_item (int id);
+    public signal void delete_item (int id);
+
 
     private const string SEARCH_CSS =
     """
@@ -156,6 +158,16 @@ public class Clipped.MainWindow : Gtk.Dialog {
                     return true;
                 case Gdk.Key.Return:
                     return false;
+                case Gdk.Key.Delete:
+                    if (!search_headerbar.is_focus) {
+                        var row = list_box.get_selected_row ();
+                        delete_item ((row as Widgets.ClipboardListRow).id);
+                        row.destroy ();
+                        search_changed (search_headerbar.text);
+                        return true;
+                    }
+
+                    break;
                 default:
                     break;
             }

@@ -42,7 +42,7 @@ public class Clipped.Application : Gtk.Application {
         version_string = "1.0.0";
 
         CustomShortcutSettings.init ();
-        
+
         window_removed.connect ((closed_window) => {
             if (queued_paste != null) {
                 clipboard_store.select_item (queued_paste);
@@ -110,6 +110,10 @@ public class Clipped.Application : Gtk.Application {
                 queued_paste = id;
             });
 
+            window.delete_item.connect ((id) => {
+                clipboard_store.delete_item (id);
+            });
+
             keybinds = new KeybindingManager();
             keybinds.bind (get_paste_shortcut (), () => {
                 close_window ();
@@ -134,7 +138,7 @@ public class Clipped.Application : Gtk.Application {
         }
         return null;
     }
-    
+
     private void set_default_shortcut () {
         CustomShortcutSettings.init ();
         foreach (var shortcut in CustomShortcutSettings.list_custom_shortcuts ()) {
@@ -154,9 +158,9 @@ public class Clipped.Application : Gtk.Application {
         var desktop_file_name = application_id + ".desktop";
         var desktop_file_path = new DesktopAppInfo (desktop_file_name).filename;
         var desktop_file = File.new_for_path (desktop_file_path);
-        var dest_path = Path.build_path (   Path.DIR_SEPARATOR_S, 
-                                            Environment.get_user_config_dir (), 
-                                            "autostart", 
+        var dest_path = Path.build_path (   Path.DIR_SEPARATOR_S,
+                                            Environment.get_user_config_dir (),
+                                            "autostart",
                                             desktop_file_name);
         var dest_file = File.new_for_path (dest_path);
         try {
@@ -215,7 +219,7 @@ public class Clipped.Application : Gtk.Application {
 			command_line.print ("%s\n", version_string);
 			return 0;
 		}
-        
+
         hold ();
         activate ();
         already_running = true;

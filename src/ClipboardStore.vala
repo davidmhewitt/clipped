@@ -39,7 +39,7 @@ public class Clipped.ClipboardStore : Object {
         string optional_uri;
         int optional_int;
     }
- 
+
     public ClipboardStore (uint retention_period) {
         retention_period_days = retention_period;
 
@@ -52,7 +52,7 @@ public class Clipped.ClipboardStore : Object {
                 warning ("Failed to create directory to store clipboard data: %s", e.message);
             }
         }
-        
+
         db_location = Path.build_path (Path.DIR_SEPARATOR_S, config_dir_path, "ClipboardStore.sqlite");
         if (File.new_for_path (db_location).query_exists ()) {
             open_database ();
@@ -65,7 +65,7 @@ public class Clipped.ClipboardStore : Object {
     public void set_retention_days (uint days) {
         retention_period_days = days;
     }
-    
+
     private bool open_database () {
         int ec = Sqlite.Database.open(db_location, out db);
         if(ec != Sqlite.OK) {
@@ -117,7 +117,7 @@ public class Clipped.ClipboardStore : Object {
 
         param_position = stmt.bind_parameter_index ("$CHECKSUM");
         assert (param_position > 0);
-        stmt.bind_text (param_position, checksum);	    
+        stmt.bind_text (param_position, checksum);
 
         ec = stmt.step();
 		if (ec != Sqlite.DONE) {
@@ -136,9 +136,9 @@ public class Clipped.ClipboardStore : Object {
 
         int param_position = stmt.bind_parameter_index ("$LIMIT");
         assert (param_position > 0);
-        
+
         stmt.bind_int (param_position, limit);
-        
+
         var entries = new Gee.ArrayList<ClipboardEntry?> ();
         while ((ec = stmt.step ()) == Sqlite.ROW) {
             ClipboardEntry entry = ClipboardEntry () {
@@ -152,7 +152,7 @@ public class Clipped.ClipboardStore : Object {
 			warning ("Error fetching clipboard entries: %s\n", db.errmsg ());
             return null;
         }
-        
+
         return entries;
     }
 
@@ -168,7 +168,7 @@ public class Clipped.ClipboardStore : Object {
         string prepared_query_str = "";
         if (wildcard_app_search_term != null) {
             prepared_query_str = """
-                SELECT rowid, * FROM entry 
+                SELECT rowid, * FROM entry
                 WHERE text LIKE $TEXT_SEARCH
                 AND application_name LIKE $APP_SEARCH
                 ORDER BY date_copied DESC
@@ -181,7 +181,7 @@ public class Clipped.ClipboardStore : Object {
                 ORDER BY date_copied DESC
                 LIMIT $LIMIT;
             """;
-        }            
+        }
 	    int ec = db.prepare_v2 (prepared_query_str, prepared_query_str.length, out stmt);
 	    if (ec != Sqlite.OK) {
 		    warning ("Error searching clipboard entries: %s\n", db.errmsg ());
@@ -189,17 +189,17 @@ public class Clipped.ClipboardStore : Object {
 	    }
 
         int param_position = stmt.bind_parameter_index ("$TEXT_SEARCH");
-        assert (param_position > 0);        
+        assert (param_position > 0);
         stmt.bind_text (param_position, wildcard_search_term);
 
         if (wildcard_app_search_term != null) {
             param_position = stmt.bind_parameter_index ("$APP_SEARCH");
-            assert (param_position > 0);        
+            assert (param_position > 0);
             stmt.bind_text (param_position, wildcard_app_search_term);
         }
 
         param_position = stmt.bind_parameter_index ("$LIMIT");
-        assert (param_position > 0);        
+        assert (param_position > 0);
         stmt.bind_int (param_position, limit);
 
         var entries = new Gee.ArrayList<ClipboardEntry?> ();
@@ -215,7 +215,7 @@ public class Clipped.ClipboardStore : Object {
 			warning ("Error searching clipboard entries: %s\n", db.errmsg ());
             return null;
         }
-        
+
         return entries;
     }
 
@@ -229,7 +229,7 @@ public class Clipped.ClipboardStore : Object {
 
         int param_position = stmt.bind_parameter_index ("$ROWID");
         assert (param_position > 0);
-        
+
         stmt.bind_int (param_position, id);
 
         if ((ec = stmt.step ()) == Sqlite.ROW) {
@@ -278,5 +278,20 @@ public class Clipped.ClipboardStore : Object {
         if ((ec = stmt.step ()) != Sqlite.DONE) {
             warning ("Error purging older clipboard entries: %s\n", db.errmsg ());
         }
+    }
+
+    public void delete_item (int id) {
+        Sqlite.Statement stmt;
+        const string prepared_query_str = "DELETE FROM entry WHERE rowid = $ROWID;";
+	    int ec = db.prepare_v2 (prepared_query_str, prepared_query_str.length, out stmt);
+	    if (ec != Sqlite.OK) {
+		    warning ("Error getting clipboard entry for pasting: %s\n", db.errmsg ());
+	    }
+
+        int param_position = stmt.bind_parameter_index ("$ROWID");
+        assert (param_position > 0);
+
+        stmt.bind_int (param_position, id);
+        stmt.step ();
     }
 }
