@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.davidmhewitt.clipped\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-09 16:55+0900\n"
+"POT-Creation-Date: 2019-05-12 11:43+0200\n"
 "PO-Revision-Date: 2019-05-09 17:00+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.2.1\n"
 
 #: src/Settings/Shortcut.vala:37
 msgid "Disabled"
@@ -26,19 +25,19 @@ msgstr "無効"
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: src/MainWindow.vala:54
+#: src/MainWindow.vala:59
 msgid "Search Clipboard History…"
 msgstr "クリップボードの履歴を検索…"
 
-#: src/MainWindow.vala:98
+#: src/MainWindow.vala:103
 msgid "No Clipboard Items Found"
 msgstr "クリップボードに項目が見つかりません"
 
-#: src/MainWindow.vala:188
+#: src/MainWindow.vala:207
 msgid "Try changing search terms."
 msgstr "検索用語を変えてみてください。"
 
-#: src/MainWindow.vala:190
+#: src/MainWindow.vala:209
 msgid "Items must be copied before they appear in Clipped"
 msgstr "項目は Clipped に表示される前にコピーされる必要があります"
 

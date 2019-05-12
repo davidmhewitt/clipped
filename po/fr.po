@@ -1,17 +1,21 @@
+# French translations for com.github.davidmhewitt.clipped package.
+# Copyright (C) 2019 THE com.github.davidmhewitt.clipped'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.davidmhewitt.clipped package.
+# NathanBnm, 2019.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: com.github.davidmhewitt.clipped\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 14:08+0100\n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-05-12 11:43+0200\n"
+"PO-Revision-Date: 2019-05-12 11:37+0200\n"
+"Last-Translator: NathanBnm\n"
+"Language-Team: none\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n>1;\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: src/Settings/Shortcut.vala:37
 msgid "Disabled"
@@ -21,19 +25,19 @@ msgstr "Désactivé"
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: src/MainWindow.vala:54
+#: src/MainWindow.vala:59
 msgid "Search Clipboard History…"
-msgstr "Rechercher dans l'historique du presse-papier"
+msgstr "Rechercher dans l'historique du presse-papiers…"
 
-#: src/MainWindow.vala:98
+#: src/MainWindow.vala:103
 msgid "No Clipboard Items Found"
-msgstr "Aucune entrée trouvée"
+msgstr "Aucune entrée du presse-papiers trouvée"
 
-#: src/MainWindow.vala:188
+#: src/MainWindow.vala:207
 msgid "Try changing search terms."
-msgstr "Essayez une autre recherche."
+msgstr "Essayez de modifier votre recherche."
 
-#: src/MainWindow.vala:190
+#: src/MainWindow.vala:209
 msgid "Items must be copied before they appear in Clipped"
 msgstr "Les entrées doivent être copiées pour apparaître dans Clipped"
 
@@ -57,7 +61,7 @@ msgid ""
 "If you wish to change this behaviour, visit <a href=\"settings://"
 "applications/startup\">Application Settings…</a>"
 msgstr ""
-"Pour désactiver cette option, accédez au <a href=\"settings://applications/"
+"Pour modifier ce comportement, accédez au <a href=\"settings://applications/"
 "startup\">paramétrage de l'application…</a>"
 
 #: src/PreferencesWindow.vala:66
@@ -70,4 +74,4 @@ msgstr "Raccourci pour coller :"
 
 #: src/PreferencesWindow.vala:87
 msgid "Days to keep infrequently used items:"
-msgstr "Jours de conservation des entrées peu utilisées : "
+msgstr "Nombre de jours de conservation des entrées peu utilisées : "

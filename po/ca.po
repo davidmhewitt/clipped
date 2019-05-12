@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 14:08+0100\n"
+"POT-Creation-Date: 2019-05-12 11:43+0200\n"
 "PO-Revision-Date: 2018-10-21 07:04-0500\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: \n"
@@ -26,19 +26,19 @@ msgstr "Inhabilitat"
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: src/MainWindow.vala:54
+#: src/MainWindow.vala:59
 msgid "Search Clipboard History…"
 msgstr "Cerca a l’historial del porta-retalls…"
 
-#: src/MainWindow.vala:98
+#: src/MainWindow.vala:103
 msgid "No Clipboard Items Found"
 msgstr "No s’ha trobat cap element al porta-retalls"
 
-#: src/MainWindow.vala:188
+#: src/MainWindow.vala:207
 msgid "Try changing search terms."
 msgstr "Proveu de canviar els termes de cerca."
 
-#: src/MainWindow.vala:190
+#: src/MainWindow.vala:209
 msgid "Items must be copied before they appear in Clipped"
 msgstr "Els elements s’han de copiar abans que apareguin al Clipped"
 

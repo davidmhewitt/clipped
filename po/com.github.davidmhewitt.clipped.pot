@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.davidmhewitt.clipped\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 14:08+0100\n"
+"POT-Creation-Date: 2019-05-12 11:43+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,19 +25,19 @@ msgstr ""
 msgid "Ctrl"
 msgstr ""
 
-#: src/MainWindow.vala:54
+#: src/MainWindow.vala:59
 msgid "Search Clipboard History…"
 msgstr ""
 
-#: src/MainWindow.vala:98
+#: src/MainWindow.vala:103
 msgid "No Clipboard Items Found"
 msgstr ""
 
-#: src/MainWindow.vala:188
+#: src/MainWindow.vala:207
 msgid "Try changing search terms."
 msgstr ""
 
-#: src/MainWindow.vala:190
+#: src/MainWindow.vala:209
 msgid "Items must be copied before they appear in Clipped"
 msgstr ""
 
