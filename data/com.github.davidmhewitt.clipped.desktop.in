@@ -10,6 +10,7 @@ Type=Application
 X-GNOME-Gettext-Domain=clipped
 Keywords=Clipboard;Manager;History;Copy;Paste;
 Actions=Preferences;
+StartupWMClass=com.github.davidmhewitt.clipped
 
 [Desktop Action Preferences]
 Name=Clipped Preferences
