@@ -138,15 +138,6 @@ public class Clipped.Application : Gtk.Application {
         queued_paste = null;
     }
 
-    private string? get_paste_shortcut () {
-        foreach (var shortcut in CustomShortcutSettings.list_custom_shortcuts ()) {
-            if (shortcut.command == SHOW_PASTE_CMD) {
-                return shortcut.shortcut;
-            }
-        }
-        return null;
-    }
-
     private void set_default_shortcut () {
         CustomShortcutSettings.init ();
         foreach (var shortcut in CustomShortcutSettings.list_custom_shortcuts ()) {
