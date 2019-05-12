@@ -29,7 +29,6 @@ public class Clipped.Application : Gtk.Application {
     private string version_string;
 
     private ClipboardStore clipboard_store;
-    private KeybindingManager keybinds;
 
     private bool show_paste = false;
     private bool show_preferences = false;
@@ -113,11 +112,6 @@ public class Clipped.Application : Gtk.Application {
             window.delete_item.connect ((id) => {
                 clipboard_store.delete_item (id);
             });
-
-            keybinds = new KeybindingManager();
-            keybinds.bind (get_paste_shortcut (), () => {
-                close_window ();
-            });
         }
     }
 
@@ -127,7 +121,6 @@ public class Clipped.Application : Gtk.Application {
             window = null;
         }
         queued_paste = null;
-        keybinds.unbind (get_paste_shortcut ());
     }
 
     private string? get_paste_shortcut () {
