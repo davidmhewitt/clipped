@@ -88,6 +88,13 @@ public class Clipped.Application : Gtk.Application {
         }
 
         if (show_paste || (already_running && !show_preferences)) {
+            unowned List<Gtk.Window> windows = get_windows ();
+            if (windows.length () > 0) {
+                window = (MainWindow)windows.data;
+                close_window ();
+                return;
+            }
+
             queued_paste = null;
             window = new MainWindow (clipboard_store.get_most_recent_items ());
             add_window (window);
@@ -100,8 +107,12 @@ public class Clipped.Application : Gtk.Application {
                 }
             });
 
-            window.focus_out_event.connect (() => {
-                close_window ();
+            Timeout.add (100, () => {
+                window.focus_out_event.connect (() => {
+                    close_window ();
+                    return false;
+                });
+
                 return false;
             });
 
@@ -117,9 +128,13 @@ public class Clipped.Application : Gtk.Application {
 
     private void close_window () {
         if (window != null) {
-            window.destroy ();
-            window = null;
+            Timeout.add (250, () => {
+                window.destroy ();
+                window = null;
+                return false;
+            });
         }
+
         queued_paste = null;
     }
 
