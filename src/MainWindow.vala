@@ -161,10 +161,14 @@ public class Clipped.MainWindow : Gtk.Dialog {
                 case Gdk.Key.Delete:
                     if (!search_headerbar.is_focus) {
                         var row = list_box.get_selected_row ();
-                        delete_item ((row as Widgets.ClipboardListRow).id);
-                        row.destroy ();
-                        search_changed (search_headerbar.text);
-                        return true;
+                        if (row != null) {
+                            delete_item ((row as Widgets.ClipboardListRow).id);
+                            row.destroy ();
+                            search_changed (search_headerbar.text);
+                            return true;
+                        }
+
+                        break;
                     }
 
                     break;
