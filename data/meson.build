@@ -4,6 +4,10 @@ foreach i : icon_size
     install_data(
         join_paths(i, meson.project_name() + '.svg'),
         install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i, 'apps')
+    )    
+    install_data(
+        join_paths(i, meson.project_name() + '.svg'),
+        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
     )
 endforeach
 
