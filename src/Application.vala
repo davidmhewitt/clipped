@@ -29,7 +29,6 @@ public class Clipped.Application : Gtk.Application {
     private string version_string;
 
     private ClipboardStore clipboard_store;
-    private KeybindingManager keybinds;
 
     private bool show_paste = false;
     private bool show_preferences = false;
@@ -89,6 +88,13 @@ public class Clipped.Application : Gtk.Application {
         }
 
         if (show_paste || (already_running && !show_preferences)) {
+            unowned List<Gtk.Window> windows = get_windows ();
+            if (windows.length () > 0) {
+                window = (MainWindow)windows.data;
+                close_window ();
+                return;
+            }
+
             queued_paste = null;
             window = new MainWindow (clipboard_store.get_most_recent_items ());
             add_window (window);
@@ -101,8 +107,12 @@ public class Clipped.Application : Gtk.Application {
                 }
             });
 
-            window.focus_out_event.connect (() => {
-                close_window ();
+            Timeout.add (100, () => {
+                window.focus_out_event.connect (() => {
+                    close_window ();
+                    return false;
+                });
+
                 return false;
             });
 
@@ -113,30 +123,19 @@ public class Clipped.Application : Gtk.Application {
             window.delete_item.connect ((id) => {
                 clipboard_store.delete_item (id);
             });
-
-            keybinds = new KeybindingManager();
-            keybinds.bind (get_paste_shortcut (), () => {
-                close_window ();
-            });
         }
     }
 
     private void close_window () {
         if (window != null) {
-            window.destroy ();
-            window = null;
+            Timeout.add (250, () => {
+                window.destroy ();
+                window = null;
+                return false;
+            });
         }
-        queued_paste = null;
-        keybinds.unbind (get_paste_shortcut ());
-    }
 
-    private string? get_paste_shortcut () {
-        foreach (var shortcut in CustomShortcutSettings.list_custom_shortcuts ()) {
-            if (shortcut.command == SHOW_PASTE_CMD) {
-                return shortcut.shortcut;
-            }
-        }
-        return null;
+        queued_paste = null;
     }
 
     private void set_default_shortcut () {

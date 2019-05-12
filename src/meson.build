@@ -8,7 +8,6 @@ sources = files(
     'Application.vala',
     'ClipboardManager.vala',
     'ClipboardStore.vala',
-    'KeybindingManager.vala',
     'MainWindow.vala',
     'PreferencesWindow.vala'
 )
