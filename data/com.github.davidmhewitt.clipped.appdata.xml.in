@@ -19,6 +19,16 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.1.1" date="2019-05-13">
+      <description>
+        <ul>
+          <li>Possible fixes for opening Clipped with shortcut</li>
+          <li>Added HiDPI icons</li>
+          <li>Fix for occasional crash when deleting items</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.0" date="2019-05-11">
       <description>
         <ul>

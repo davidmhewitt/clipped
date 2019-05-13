@@ -38,7 +38,7 @@ public class Clipped.Application : Gtk.Application {
     construct {
         application_id = "com.github.davidmhewitt.clipped";
         flags = ApplicationFlags.HANDLES_COMMAND_LINE;
-        version_string = "1.0.0";
+        version_string = "1.1.1";
 
         CustomShortcutSettings.init ();
 
