@@ -107,6 +107,8 @@ public class Clipped.Application : Gtk.Application {
                 }
             });
 
+            // Sometimes wingpanel will focus out the window on startup, so wait 200ms
+            // before connecting the focus out handler
             Timeout.add (200, () => {
                 window.focus_out_event.connect (() => {
                     close_window ();
