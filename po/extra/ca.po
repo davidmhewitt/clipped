@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-11 12:46+0100\n"
+"POT-Creation-Date: 2019-05-13 10:27+0100\n"
 "PO-Revision-Date: 2019-05-06 14:02+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -37,7 +37,7 @@ msgstr ""
 msgid "Clipboard;Manager;History;Copy;Paste;"
 msgstr "Porta-retalls;Gestor;Historial;Copiar;Enganxar;"
 
-#: data/com.github.davidmhewitt.clipped.desktop.in:16
+#: data/com.github.davidmhewitt.clipped.desktop.in:17
 msgid "Clipped Preferences"
 msgstr "Preferències del Clipped"
 
@@ -52,25 +52,41 @@ msgid ""
 msgstr ""
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:25
-msgid "You can now delete clipboard entries with the delete key"
+msgid "Possible fixes for opening Clipped with shortcut"
 msgstr ""
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:26
-msgid "Typing numbers is now possible while the search bar is focused"
+msgid "Added HiDPI icons"
 msgstr ""
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:27
-msgid "Updated Spanish and Catalan translations by @fitojb"
+msgid "Fix for occasional crash when deleting items"
 msgstr ""
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:28
+msgid "Updated translations"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:35
+msgid "You can now delete clipboard entries with the delete key"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:36
+msgid "Typing numbers is now possible while the search bar is focused"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:37
+msgid "Updated Spanish and Catalan translations by @fitojb"
+msgstr ""
+
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:38
 msgid "Update French translations by @NathanBnm"
 msgstr ""
 
-#: data/com.github.davidmhewitt.clipped.appdata.xml.in:29
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:39
 msgid "Add Japanese translations by @ryonakano"
 msgstr ""
 
-#: data/com.github.davidmhewitt.clipped.appdata.xml.in:63
+#: data/com.github.davidmhewitt.clipped.appdata.xml.in:73
 msgid "David Hewitt"
 msgstr ""
