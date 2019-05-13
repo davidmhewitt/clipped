@@ -107,7 +107,7 @@ public class Clipped.Application : Gtk.Application {
                 }
             });
 
-            Timeout.add (100, () => {
+            Timeout.add (200, () => {
                 window.focus_out_event.connect (() => {
                     close_window ();
                     return false;
