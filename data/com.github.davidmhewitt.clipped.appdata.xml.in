@@ -19,7 +19,7 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="1.1.1" date="2019-05-13">
+    <release version="1.1.1" date="2019-05-15">
       <description>
         <ul>
           <li>Possible fixes for opening Clipped with shortcut</li>
