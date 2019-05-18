@@ -23,7 +23,7 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
     public PreferencesWindow (bool first_run = false) {
         settings = new GLib.Settings ("com.github.davidmhewitt.clipped.settings");
 
-        // Window properties        
+        // Window properties
         title = _("Preferences");
         set_size_request (MIN_WIDTH, MIN_HEIGHT);
         resizable = false;
@@ -47,7 +47,7 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
     }
 
     private Gtk.Grid create_general_settings_widgets (bool first_run) {
-        string autostart_warning = 
+        string autostart_warning =
             _("<b>Note:</b> From now on, Clipped will automatically start in the background when you log in.") + " " +
             _("If you wish to change this behaviour, visit <a href=\"settings://applications/startup\">Application Settings\u2026</a>");
 

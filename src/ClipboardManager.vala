@@ -19,8 +19,7 @@
 * Authored by: David Hewitt <davidmhewitt@gmail.com>
 */
 
-class Clipped.ClipboardManager : GLib.Object
-{
+class Clipped.ClipboardManager : GLib.Object {
     private Gtk.Clipboard clipboard = null;
 
     public signal void on_text_copied (string text);
@@ -58,8 +57,7 @@ class Clipped.ClipboardManager : GLib.Object
         perform_key_event ("<Control>v", false, 0);
     }
 
-    private static void perform_key_event (string accelerator, bool press, ulong delay)
-    {
+    private static void perform_key_event (string accelerator, bool press, ulong delay) {
         uint keysym;
         Gdk.ModifierType modifiers;
         Gtk.accelerator_parse (accelerator, out keysym, out modifiers);

@@ -3,7 +3,8 @@ class CustomShortcutSettings : Object {
     const string SCHEMA = "org.gnome.settings-daemon.plugins.media-keys";
     const string KEY = "custom-keybinding";
 
-    const string RELOCATABLE_SCHEMA_PATH_TEMLPATE = "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom%d/";
+    const string RELOCATABLE_SCHEMA_PATH_TEMLPATE =
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom%d/";
 
     const int MAX_SHORTCUTS = 100;
 
