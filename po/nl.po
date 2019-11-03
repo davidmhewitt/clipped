@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.4\n"
 
 #: src/Settings/Shortcut.vala:37
 msgid "Disabled"
@@ -23,7 +23,7 @@ msgstr "Ctrl"
 
 #: src/MainWindow.vala:54
 msgid "Search Clipboard History…"
-msgstr "Zoeken door klembordgeschiedenis…"
+msgstr "Klembordgeschiedenis doorzoeken…"
 
 #: src/MainWindow.vala:98
 msgid "No Clipboard Items Found"
@@ -31,11 +31,11 @@ msgstr "Geen klemborditems gevonden"
 
 #: src/MainWindow.vala:188
 msgid "Try changing search terms."
-msgstr "Probeer andere zoektermen te gebruiken."
+msgstr "Probeer andere zoektermen."
 
 #: src/MainWindow.vala:190
 msgid "Items must be copied before they appear in Clipped"
-msgstr "Items moeten worden gekopieerd voordat ze verschijnen in Clipped"
+msgstr "Items moeten worden gekopieerd voordat ze in Clipped worden getoond"
 
 #: src/PreferencesWindow.vala:27
 msgid "Preferences"
@@ -50,16 +50,16 @@ msgid ""
 "<b>Note:</b> From now on, Clipped will automatically start in the background "
 "when you log in."
 msgstr ""
-"<b>Opmerking:</b> Clipped wordt voortaan automatisch gestart op de "
-"achtergrond als u inlogt."
+"<b>Let op:</b> Clipped wordt voortaan automatisch gestart op de achtergrond "
+"na het aanmelden."
 
 #: src/PreferencesWindow.vala:52
 msgid ""
 "If you wish to change this behaviour, visit <a href=\"settings://"
 "applications/startup\">Application Settings…</a>"
 msgstr ""
-"Als u dit wilt wijzigen, ga dan naar de <a href=\"settings://applications/"
-"startup\">Applicatie-instellingen…</a>"
+"Als je dit wilt aanpassen, ga dan naar de <a href=\"settings://applications/"
+"startup\">toepassingsinstellingen…</a>"
 
 #: src/PreferencesWindow.vala:66
 msgid "General Settings"
