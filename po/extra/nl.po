@@ -8,86 +8,91 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-13 10:27+0100\n"
-"PO-Revision-Date: 2019-05-06 14:02+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2019-11-03 12:27+0100\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: none\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.4\n"
 
 #: data/com.github.davidmhewitt.clipped.desktop.in:3
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:7
 msgid "Clipped"
-msgstr ""
+msgstr "Clipped"
 
 #: data/com.github.davidmhewitt.clipped.desktop.in:4
 msgid "Clipboard Manager"
-msgstr ""
+msgstr "Klembordbeheerder"
 
 #: data/com.github.davidmhewitt.clipped.desktop.in:5
 msgid "Manage and paste clipboard history"
-msgstr ""
+msgstr "Beheer de klembordgeschiedenis"
 
 #: data/com.github.davidmhewitt.clipped.desktop.in:8
 msgid "com.github.davidmhewitt.clipped"
-msgstr ""
+msgstr "com.github.davidmhewitt.clipped"
 
 #: data/com.github.davidmhewitt.clipped.desktop.in:12
 msgid "Clipboard;Manager;History;Copy;Paste;"
-msgstr ""
+msgstr "Klembord;Beheerder;Geschiedenis;Kopieer;Plak;"
 
 #: data/com.github.davidmhewitt.clipped.desktop.in:17
 msgid "Clipped Preferences"
-msgstr ""
+msgstr "Clipped-voorkeuren"
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:8
 msgid "Manage your clipboard with ease"
-msgstr ""
+msgstr "Beheer op eenvoudige wijze het klembord"
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:10
 msgid ""
 "Keep and search your clipboard history and paste old items quickly and "
 "easily."
 msgstr ""
+"Bewaar en doorzoek de klembordgeschiedenis, en plak oude items "
+"gemakkelijk en snel."
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:25
 msgid "Possible fixes for opening Clipped with shortcut"
 msgstr ""
+"Mogelijke foutoplossing voor het openen van Clipped middels sneltoetsen"
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:26
 msgid "Added HiDPI icons"
-msgstr ""
+msgstr "HiDPI-pictogrammen toegevoegd"
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:27
 msgid "Fix for occasional crash when deleting items"
-msgstr ""
+msgstr "Foutoplossing voor crash bij verwijderen van items"
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:28
 msgid "Updated translations"
-msgstr ""
+msgstr "Bijgewerkte vertalingen"
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:35
 msgid "You can now delete clipboard entries with the delete key"
-msgstr ""
+msgstr "Je kunt vanaf nu klemborditems verwijderen met de delete-toets"
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:36
 msgid "Typing numbers is now possible while the search bar is focused"
-msgstr ""
+msgstr "Je kunt vanaf nu cijfers typen terwijl de zoekbalk gefocust is"
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:37
 msgid "Updated Spanish and Catalan translations by @fitojb"
 msgstr ""
+"Catalaanse en Spaanse vertalingen bijgewerkt, met dank aan @fitojb"
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:38
 msgid "Update French translations by @NathanBnm"
-msgstr ""
+msgstr "Franse vertaling bijgewerkt, met dank aan @NathanBnm"
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:39
 msgid "Add Japanese translations by @ryonakano"
-msgstr ""
+msgstr "Japanse vertaling, met dank aan @ryonakano"
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:73
 msgid "David Hewitt"
-msgstr ""
+msgstr "David Hewitt"
