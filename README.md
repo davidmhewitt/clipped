@@ -22,3 +22,5 @@ You'll need the following dependencies to build:
     cd build
     ninja
     sudo ninja install
+
+Default hotkey to access clipped is __CTRL + ALT + V__
