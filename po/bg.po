@@ -8,19 +8,19 @@ msgstr ""
 
 #: src/Settings/Shortcut.vala:37
 msgid "Disabled"
-msgstr ""
+msgstr "Спрян"
 
 #: src/Settings/Shortcut.vala:46
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: src/MainWindow.vala:54
 msgid "Search Clipboard History…"
-msgstr ""
+msgstr "Търсене из Клипборд историята..."
 
 #: src/MainWindow.vala:98
 msgid "No Clipboard Items Found"
-msgstr ""
+msgstr "Не са намерени Клипборд елементи"
 
 #: src/MainWindow.vala:188
 msgid "Try changing search terms."
@@ -28,15 +28,15 @@ msgstr ""
 
 #: src/MainWindow.vala:190
 msgid "Items must be copied before they appear in Clipped"
-msgstr ""
+msgstr "Елементите трябва да бъдат копирани за да се появят в Clipped"
 
 #: src/PreferencesWindow.vala:27
 msgid "Preferences"
-msgstr ""
+msgstr "Предпотчиания"
 
 #: src/PreferencesWindow.vala:32
 msgid "Close"
-msgstr ""
+msgstr "Затвори"
 
 #: src/PreferencesWindow.vala:51
 msgid ""
@@ -52,11 +52,11 @@ msgstr ""
 
 #: src/PreferencesWindow.vala:66
 msgid "General Settings"
-msgstr ""
+msgstr "Основни Настройки"
 
 #: src/PreferencesWindow.vala:79
 msgid "Paste Shortcut:"
-msgstr ""
+msgstr "Прякпът за Постави"
 
 #: src/PreferencesWindow.vala:87
 msgid "Days to keep infrequently used items:"
