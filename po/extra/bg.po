@@ -20,15 +20,15 @@ msgstr ""
 #: data/com.github.davidmhewitt.clipped.desktop.in:3
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:7
 msgid "Clipped"
-msgstr ""
+msgstr "Clipped"
 
 #: data/com.github.davidmhewitt.clipped.desktop.in:4
 msgid "Clipboard Manager"
-msgstr ""
+msgstr "Клипборд Мениджър"
 
 #: data/com.github.davidmhewitt.clipped.desktop.in:5
 msgid "Manage and paste clipboard history"
-msgstr ""
+msgstr "Контролирай и извличай клипборд история"
 
 #: data/com.github.davidmhewitt.clipped.desktop.in:8
 msgid "com.github.davidmhewitt.clipped"
@@ -36,21 +36,23 @@ msgstr ""
 
 #: data/com.github.davidmhewitt.clipped.desktop.in:12
 msgid "Clipboard;Manager;History;Copy;Paste;"
-msgstr ""
+msgstr "Клипборд:Мениджър:Исотиря:Копирай:Постави;"
 
 #: data/com.github.davidmhewitt.clipped.desktop.in:17
 msgid "Clipped Preferences"
-msgstr ""
+msgstr "Clipped Предпочитания"
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:8
 msgid "Manage your clipboard with ease"
-msgstr ""
+msgstr "Менажирай твоя клипборд с леснота"
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:10
 msgid ""
 "Keep and search your clipboard history and paste old items quickly and "
 "easily."
 msgstr ""
+"Съхранявай и търси в твоята клипборд история и извличай стари елементи "
+"бързо и лесно."
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:25
 msgid "Possible fixes for opening Clipped with shortcut"
@@ -90,4 +92,4 @@ msgstr ""
 
 #: data/com.github.davidmhewitt.clipped.appdata.xml.in:73
 msgid "David Hewitt"
-msgstr ""
+msgstr "David Hewitt"
