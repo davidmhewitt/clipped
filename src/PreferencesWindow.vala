@@ -88,6 +88,10 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
         var retention_spinner = create_spinbutton (1, 90, 1);
         settings.bind ("days-to-keep-entries", retention_spinner, "value", SettingsBindFlags.DEFAULT);
 
+        var blackregex_label = create_label (_("Regex for window titles to ignore:"));
+        var blackregex_entry = create_entry ();
+        settings.bind ("window-title-blackregex", blackregex_entry, "text", SettingsBindFlags.DEFAULT);
+
         if (first_run) {
             general_grid.attach (autostart_warning_label, 0, 0, 2, 1);
         }
@@ -99,6 +103,9 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
 
         general_grid.attach (retention_label, 0, 3, 1, 1);
         general_grid.attach (retention_spinner, 1, 3, 1, 1);
+
+        general_grid.attach (blackregex_label, 0, 4, 1, 1);
+        general_grid.attach (blackregex_entry, 1, 4, 1, 1);
 
         return general_grid;
     }
@@ -126,5 +133,10 @@ public class Clipped.PreferencesWindow : Gtk.Dialog {
         button.hexpand = true;
 
         return button;
+    }
+
+    private Gtk.Entry create_entry () {
+        var entry = new Gtk.Entry ();
+        return entry;
     }
 }

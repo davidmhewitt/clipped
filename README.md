@@ -13,6 +13,7 @@ You'll need the following dependencies to build:
 * valac
 * libsqlite3-dev
 * libgee-0.8-dev
+* libwnck-3-dev
 
 ## How To Install From Source
 
