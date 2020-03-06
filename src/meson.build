@@ -11,6 +11,7 @@ sources = files(
     'MainWindow.vala',
     'PreferencesWindow.vala'
 )
+add_global_arguments('-DWNCK_I_KNOW_THIS_IS_UNSTABLE', language : 'c')
 
 executable(
     meson.project_name(),
@@ -22,7 +23,8 @@ executable(
         dependency('gee-0.8'),
         dependency('gdk-x11-3.0'),
         dependency('xtst'),
-        dependency('x11')
+        dependency('x11'),
+        dependency('libwnck-3.0')
     ],
     install: true
 )

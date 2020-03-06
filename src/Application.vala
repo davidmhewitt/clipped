@@ -57,14 +57,20 @@ public class Clipped.Application : Gtk.Application {
         var settings = new GLib.Settings (application_id + ".settings");
         var first_run = settings.get_boolean ("first-run");
         var retention_period = settings.get_uint ("days-to-keep-entries");
-
+        var blackregex = settings.get_string ("window-title-blackregex");
+        
         clipboard_store = new ClipboardStore (retention_period);
 
         settings.changed["days-to-keep-entries"].connect (() => {
             clipboard_store.set_retention_days (settings.get_uint ("days-to-keep-entries"));
         });
 
-        manager = new ClipboardManager ();
+        manager = new ClipboardManager (blackregex);
+
+        settings.changed["window-title-blackregex"].connect (() => {
+            manager.set_blackregex(settings.get_string ("window-title-blackregex"));
+        });
+        
         manager.start ();
 
         manager.on_text_copied.connect ((text) => {

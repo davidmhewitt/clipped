@@ -21,11 +21,15 @@
 
 class Clipped.ClipboardManager : GLib.Object {
     private Gtk.Clipboard clipboard = null;
+    private Regex blackregex = null;
+    private Wnck.Screen screen = null;
 
     public signal void on_text_copied (string text);
 
-    public ClipboardManager () {
+    public ClipboardManager (string blackregex_pattern) {
         clipboard = Gtk.Clipboard.get (Gdk.SELECTION_CLIPBOARD);
+        screen = Wnck.Screen.get_default();
+        set_blackregex (blackregex_pattern);
     }
 
     ~ClipboardManager () {
@@ -42,6 +46,18 @@ class Clipped.ClipboardManager : GLib.Object {
 
         if (text_available) {
             if (text != null && text != "") {
+                if (blackregex != null) {
+                    string title = request_title ();
+                    if (title.length == 0) {
+                        // in the case a blackregex is set but we cannot retrieve the window title
+                        // due to libwinck not ready, or other reason, we must assume it would be a match
+                        // or risk leaking the secure data.
+                        return;
+                    }
+                    if (blackregex.match (title)) {
+                        return;
+                    }
+                }
                 on_text_copied (text);
             }
         }
@@ -51,10 +67,35 @@ class Clipped.ClipboardManager : GLib.Object {
         string? result = clipboard.wait_for_text ();
         return result;
     }
+    
+    private string request_title () {
+        var window = screen.get_active_window ();
+        if (window == null) {
+            screen.force_update();
+            window = screen.get_active_window ();
+            if (window == null) {
+                return "";
+            }
+        }
+
+        return window.get_name () ?? "";
+    }
 
     public void paste () {
         perform_key_event ("<Control>v", true, 100);
         perform_key_event ("<Control>v", false, 0);
+    }
+
+    public void set_blackregex (string? pattern) {
+        if (pattern == null || pattern.length == 0) {
+            blackregex = null;
+            return;
+        }
+        try {
+            blackregex = new Regex (pattern);
+        } catch (GLib.RegexError ex) {
+            warning("Error while parsing regex.");
+        }
     }
 
     private static void perform_key_event (string accelerator, bool press, ulong delay) {
