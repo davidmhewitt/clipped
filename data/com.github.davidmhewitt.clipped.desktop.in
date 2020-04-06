@@ -11,7 +11,9 @@ X-GNOME-Gettext-Domain=clipped
 Keywords=Clipboard;Manager;History;Copy;Paste;
 Actions=Preferences;
 StartupWMClass=com.github.davidmhewitt.clipped
+X-GNOME-UsesNotifications=true
 
 [Desktop Action Preferences]
 Name=Clipped Preferences
 Exec=com.github.davidmhewitt.clipped --preferences
+
