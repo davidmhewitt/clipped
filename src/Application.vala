@@ -1,28 +1,28 @@
 /*
-* Copyright (c) 2017 David Hewitt (https://github.com/davidmhewitt)
-*
-* This program is free software; you can redistribute it and/or
-* modify it under the terms of the GNU General Public
-* License as published by the Free Software Foundation; either
-* version 2 of the License, or (at your option) any later version.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-* General Public License for more details.
-*
-* You should have received a copy of the GNU General Public
-* License along with this program; if not, write to the
-* Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-* Boston, MA 02110-1301 USA
-*
-* Authored by: David Hewitt <davidmhewitt@gmail.com>
-*/
+ * Copyright (c) 2017 David Hewitt (https://github.com/davidmhewitt)
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public
+ * License along with this program; if not, write to the
+ * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301 USA
+ *
+ * Authored by: David Hewitt <davidmhewitt@gmail.com>
+ */
 
 public class Clipped.Application : Gtk.Application {
-    private static Clipped.Application? _instance = null;
+    private static Clipped.Application ? _instance = null;
     private ClipboardManager manager;
-    private MainWindow? window = null;
+    private MainWindow ? window = null;
 
     public const string SHOW_PASTE_CMD = "com.github.davidmhewitt.clipped --show-paste-window";
     private const string SHOW_PASTE_SHORTCUT = "<Control><Alt>v";
@@ -30,15 +30,16 @@ public class Clipped.Application : Gtk.Application {
 
     private ClipboardStore clipboard_store;
 
+
     private bool show_paste = false;
     private bool show_preferences = false;
     private bool already_running = false;
-    private int? queued_paste = null;
+    private int ? queued_paste = null;
 
     construct {
         application_id = "com.github.davidmhewitt.clipped";
         flags = ApplicationFlags.HANDLES_COMMAND_LINE;
-        version_string = "1.1.1";
+        version_string = "1.1.2";
 
         CustomShortcutSettings.init ();
 
@@ -57,6 +58,8 @@ public class Clipped.Application : Gtk.Application {
         var settings = new GLib.Settings (application_id + ".settings");
         var first_run = settings.get_boolean ("first-run");
         var retention_period = settings.get_uint ("days-to-keep-entries");
+        var show_notification = settings.get_boolean ("show-notification");
+
 
         clipboard_store = new ClipboardStore (retention_period);
 
@@ -69,6 +72,17 @@ public class Clipped.Application : Gtk.Application {
 
         manager.on_text_copied.connect ((text) => {
             clipboard_store.insert_text_item (text);
+
+            if (show_notification) {
+                var notification = new Notification (_("Clipped"));
+                var notification_text = (_("Copied"));
+                notification.set_body (notification_text + " " + text);
+                this.send_notification ("com.github.davidmhewitt.clipped.settings", notification);
+            }
+        });
+
+
+        manager.on_after_paste.connect (() => {
         });
 
         if (first_run) {
@@ -90,7 +104,7 @@ public class Clipped.Application : Gtk.Application {
         if (show_paste || (already_running && !show_preferences)) {
             unowned List<Gtk.Window> windows = get_windows ();
             if (windows.length () > 0) {
-                window = (MainWindow)windows.data;
+                window = (MainWindow) windows.data;
                 close_window ();
                 return;
             }
@@ -164,7 +178,7 @@ public class Clipped.Application : Gtk.Application {
             Environment.get_user_config_dir (),
             "autostart",
             desktop_file_name
-        );
+                        );
 
         var dest_file = File.new_for_path (dest_path);
         try {
@@ -183,7 +197,7 @@ public class Clipped.Application : Gtk.Application {
         }
     }
 
-    private void load_entries (Gee.ArrayList<ClipboardStore.ClipboardEntry?> entries) {
+    private void load_entries (Gee.ArrayList<ClipboardStore.ClipboardEntry ? > entries) {
         window.clear_list ();
         foreach (var item in entries) {
             window.add_entry (item);

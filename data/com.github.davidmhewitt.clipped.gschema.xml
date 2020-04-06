@@ -11,6 +11,10 @@
       <summary>How many days to keep a clipboard entry since it was last pasted</summary>
       <description>Pasting an item regularly will keep it in the store, lesser used items will be purged</description>
     </key>
+    <key type="b" name="show-notification">
+      <default>false</default>
+      <summary>Has to show notification when copying data</summary>
+      <description>Used to determine whether or not to show notification when copying data</description>
+    </key>
   </schema>
 </schemalist>
-
