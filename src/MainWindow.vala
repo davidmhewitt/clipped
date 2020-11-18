@@ -160,11 +160,9 @@ public class Clipped.MainWindow : Gtk.Dialog {
                     return false;
                 case Gdk.Key.Delete:
                     if (!search_headerbar.is_focus) {
-                        var row = list_box.get_selected_row ();
+                        var row = ((Widgets.ClipboardListRow) list_box.get_selected_row ());
                         if (row != null) {
-                            delete_item ((row as Widgets.ClipboardListRow).id);
-                            row.destroy ();
-                            search_changed (search_headerbar.text);
+                            delete_entry (row);
                             return true;
                         }
 
@@ -200,6 +198,12 @@ public class Clipped.MainWindow : Gtk.Dialog {
         }
         list_box.add (new Widgets.ClipboardListRow (index, entry));
         update_stack_visibility ();
+    }
+
+    public void delete_entry (Widgets.ClipboardListRow row) {
+        delete_item (row.id);
+        row.destroy ();
+        search_changed (search_headerbar.text);
     }
 
     private void update_stack_visibility () {

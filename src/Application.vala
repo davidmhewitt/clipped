@@ -22,7 +22,7 @@
 public class Clipped.Application : Gtk.Application {
     private static Clipped.Application? _instance = null;
     private ClipboardManager manager;
-    private MainWindow? window = null;
+    public MainWindow? window { get; private set; default = null; }
 
     public const string SHOW_PASTE_CMD = "com.github.davidmhewitt.clipped --show-paste-window";
     private const string SHOW_PASTE_SHORTCUT = "<Control><Alt>v";
