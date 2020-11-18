@@ -72,7 +72,19 @@ public class Clipped.Widgets.ClipboardListRow : Gtk.ListBoxRow {
         text.lines = 1;
         text.single_line_mode = true;
         text.max_width_chars = 60;
+
+        var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.BUTTON) {
+            tooltip_markup = Granite.markup_accel_tooltip ({"Delete"}, _("Delete this history")),
+            halign = Gtk.Align.END,
+            hexpand = true
+        };
+        delete_button.clicked.connect (() => {
+            MainWindow paste_window = ((Clipped.Application) GLib.Application.get_default ()).window;
+            paste_window.delete_entry (this);
+        });
+
         grid.attach (text, 1, 0, 1, 1);
+        grid.attach (delete_button, 2, 0, 1, 1);
 
         show_all ();
     }

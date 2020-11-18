@@ -17,6 +17,7 @@ executable(
     sources,
     dependencies: [
         dependency('gtk+-3.0'),
+        dependency('granite', version: '>= 5.4.0'),
         dependency('gio-unix-2.0'),
         dependency('sqlite3'),
         dependency('gee-0.8'),
