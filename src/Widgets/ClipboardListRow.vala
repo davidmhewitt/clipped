@@ -78,6 +78,7 @@ public class Clipped.Widgets.ClipboardListRow : Gtk.ListBoxRow {
             halign = Gtk.Align.END,
             hexpand = true
         };
+        delete_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
         delete_button.clicked.connect (() => {
             MainWindow paste_window = ((Clipped.Application) GLib.Application.get_default ()).window;
             paste_window.delete_entry (this);
