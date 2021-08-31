@@ -1,0 +1,19 @@
+app-id: com.github.davidmhewitt.clipped
+
+runtime: io.elementary.Platform
+runtime-version: '6'
+sdk: io.elementary.Sdk
+
+command: com.github.davidmhewitt.clipped
+
+finish-args:
+  - '--share=ipc'
+  - '--socket=fallback-x11'
+  - '--socket=wayland'
+
+modules:
+  - name: clipped
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: .
